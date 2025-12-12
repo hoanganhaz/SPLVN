@@ -1,7 +1,7 @@
 @extends('client.layouts.master')
 @section('content')
     <div class="page-title relative">
-            <div class="paralaximg" data-parallax="scroll" data-image-src="images/page-title/page-title-6.jpg">
+            <div class="paralaximg" data-parallax="scroll" data-image-src="assets/client/images/page-title/page-title-6.jpg">
             </div>
             <div class="content">
                 <div class="container">
@@ -36,8 +36,8 @@
                     </div>
                     <div class="col-12">
                         <div class="img-wrap">
-                            <img class="lazyload effect-paralax " src="images/section/section-about.jpg"
-                                data-src="images/section/section-about.jpg" alt="">
+                            <img class="lazyload effect-paralax " src="assets/client/images/section/section-about.jpg"
+                                data-src="assets/client/images/section/section-about.jpg" alt="">
                         </div>
                         <div class="main-content">
                             <div class="left">
@@ -120,7 +120,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="img-style ">
-                            <img class="lazyload " src="images/section/box-about.jpg" alt="img_box-about">
+                            <img class="lazyload " src="assets/client/images/section/box-about.jpg" alt="img_box-about">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -245,7 +245,7 @@
                                             </div>
                                             <div class="box-product">
                                                 <div class="product-img avt-62 round">
-                                                    <img src="images/shop/testimonials-item-1.jpg" alt="avt">
+                                                    <img src="assets/client/images/shop/testimonials-item-1.jpg" alt="avt">
                                                 </div>
                                                 <div class="box-price">
                                                     <p class="text-title  text-line-clamp-1"> <a href="product-detail.html"
@@ -256,8 +256,8 @@
                                             </div>
                                         </div>
                                         <div class="img-style">
-                                            <img data-src="images/section/testimonials-1.jpg"
-                                                src="images/section/testimonials-1.jpg" alt="img-testimonial">
+                                            <img data-src="assets/client/images/section/testimonials-1.jpg"
+                                                src="assets/client/images/section/testimonials-1.jpg" alt="img-testimonial">
                                             <a href="#quickView" data-bs-toggle="modal" class="box-icon hover-tooltip center">
                                                 <span class="icon icon-eye"></span>
                                                 <span class="tooltip">Quick View</span>
@@ -304,7 +304,7 @@
                                             </div>
                                             <div class="box-product">
                                                 <div class="product-img avt-62 round">
-                                                    <img src="images/shop/testimonials-item-2.jpg" alt="avt">
+                                                    <img src="assets/client/images/shop/testimonials-item-2.jpg" alt="avt">
                                                 </div>
                                                 <div class="box-price">
                                                     <p class="text-title  text-line-clamp-1"> <a href="product-detail.html"
@@ -314,8 +314,8 @@
                                             </div>
                                         </div>
                                         <div class="img-style">
-                                            <img data-src="images/section/testimonials-2.jpg"
-                                                src="images/section/testimonials-2.jpg" alt="img-testimonial">
+                                            <img data-src="assets/client/images/section/testimonials-2.jpg"
+                                                src="assets/client/images/section/testimonials-2.jpg" alt="img-testimonial">
                                             <a href="#quickView" data-bs-toggle="modal" class="box-icon hover-tooltip center">
                                                 <span class="icon icon-eye"></span>
                                                 <span class="tooltip">Quick View</span>
@@ -362,7 +362,7 @@
                                             </div>
                                             <div class="box-product">
                                                 <div class="product-img avt-62 round">
-                                                    <img src="images/shop/testimonials-item-3.jpg" alt="avt">
+                                                    <img src="assets/client/images/shop/testimonials-item-3.jpg" alt="avt">
                                                 </div>
                                                 <div class="box-price">
                                                     <p class="text-title  text-line-clamp-1"> <a href="product-detail.html"
@@ -372,8 +372,8 @@
                                             </div>
                                         </div>
                                         <div class="img-style">
-                                            <img data-src="images/section/testimonials-3.jpg"
-                                                src="images/section/testimonials-3.jpg" alt="img-testimonial">
+                                            <img data-src="assets/client/images/section/testimonials-3.jpg"
+                                                src="assets/client/images/section/testimonials-3.jpg" alt="img-testimonial">
                                             <a href="#quickView" data-bs-toggle="modal" class="box-icon hover-tooltip center">
                                                 <span class="icon icon-eye"></span>
                                                 <span class="tooltip">Quick View</span>
@@ -409,8 +409,8 @@
                                     <div class="team-item hover-img wow fadeInUp" data-wow-delay="0s">
                                         <div class="img-style">
                                             <a href="#">
-                                                <img class="lazyload" data-src="images/section/team-1.jpg"
-                                                    src="images/section/team-1.jpg" alt="image-team">
+                                                <img class="lazyload" data-src="assets/client/images/section/team-1.jpg"
+                                                    src="assets/client/images/section/team-1.jpg" alt="image-team">
                                             </a>
                                             <ul class="tf-social-icon style-2 ">
                                                 <li><a href="#" class="social-facebook"><i
@@ -437,8 +437,8 @@
                                     <div class="team-item hover-img wow fadeInUp" data-wow-delay="0.1s">
                                         <div class="img-style">
                                             <a href="#">
-                                                <img class="lazyload" data-src="images/section/team-2.jpg"
-                                                    src="images/section/team-2.jpg" alt="image-team">
+                                                <img class="lazyload" data-src="assets/client/images/section/team-2.jpg"
+                                                    src="assets/client/images/section/team-2.jpg" alt="image-team">
                                             </a>
                                             <ul class="tf-social-icon style-2 ">
                                                 <li><a href="#" class="social-facebook"><i
@@ -465,8 +465,8 @@
                                     <div class="team-item hover-img wow fadeInUp" data-wow-delay="0.2s">
                                         <div class="img-style">
                                             <a href="#">
-                                                <img class="lazyload" data-src="images/section/team-3.jpg"
-                                                    src="images/section/team-3.jpg" alt="image-team">
+                                                <img class="lazyload" data-src="assets/client/images/section/team-3.jpg"
+                                                    src="assets/client/images/section/team-3.jpg" alt="image-team">
                                             </a>
                                             <ul class="tf-social-icon style-2 ">
                                                 <li><a href="#" class="social-facebook"><i

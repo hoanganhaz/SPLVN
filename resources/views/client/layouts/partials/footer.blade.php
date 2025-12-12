@@ -104,22 +104,22 @@
                                 <div class="tf-payment">
                                     <ul>
                                         <li>
-                                            <img src="images/payment/payment-1.png" alt="">
+                                            <img src="assets/client/images/payment/payment-1.png" alt="">
                                         </li>
                                         <li>
-                                            <img src="images/payment/payment-2.png" alt="">
+                                            <img src="assets/client/images/payment/payment-2.png" alt="">
                                         </li>
                                         <li>
-                                            <img src="images/payment/payment-3.png" alt="">
+                                            <img src="assets/client/images/payment/payment-3.png" alt="">
                                         </li>
                                         <li>
-                                            <img src="images/payment/payment-4.png" alt="">
+                                            <img src="assets/client/images/payment/payment-4.png" alt="">
                                         </li>
                                         <li>
-                                            <img src="images/payment/payment-5.png" alt="">
+                                            <img src="assets/client/images/payment/payment-5.png" alt="">
                                         </li>
                                         <li>
-                                            <img src="images/payment/payment-6.png" alt="">
+                                            <img src="assets/client/images/payment/payment-6.png" alt="">
                                         </li>
                                     </ul>
                                 </div>

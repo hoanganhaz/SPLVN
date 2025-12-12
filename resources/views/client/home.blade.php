@@ -68,8 +68,8 @@
                         <div class="swiper-slide item1">
                             <div class="collection-position style-2">
                                 <a href="product-detail.html" class="img-style ">
-                                    <img class="lazyload effect-paralax" data-src="images/banner/banner-1.jpg"
-                                        src="images/banner/banner-1.jpg" alt="banner-cls">
+                                    <img class="lazyload effect-paralax" data-src="assets/client/images/banner/banner-1.jpg"
+                                        src="assets/client/images/banner/banner-1.jpg" alt="banner-cls">
                                 </a>
                                 <div class="content cls-content">
                                     <div class="cls-heading">
@@ -84,8 +84,8 @@
                         <div class="swiper-slide item2">
                             <div class="collection-position style-2 spacing-1 ">
                                 <a href="product-detail.html" class="img-style ">
-                                    <img class="lazyload effect-paralax" data-src="images/banner/banner-7.jpg"
-                                        src="images/banner/banner-7.jpg" alt="banner-cls">
+                                    <img class="lazyload effect-paralax" data-src="assets/client/images/banner/banner-7.jpg"
+                                        src="assets/client/images/banner/banner-7.jpg" alt="banner-cls">
                                 </a>
                                 <div class="content cls-content">
                                     <div class="cls-heading">
@@ -101,8 +101,8 @@
                         <div class="swiper-slide item3">
                             <div class="collection-position style-2 spacing-1 ">
                                 <a href="product-detail.html" class="img-style ">
-                                    <img class="lazyload effect-paralax" data-src="images/banner/banner-8.jpg"
-                                        src="images/banner/banner-8.jpg" alt="banner-cls">
+                                    <img class="lazyload effect-paralax" data-src="assets/client/images/banner/banner-8.jpg"
+                                        src="assets/client/images/banner/banner-8.jpg" alt="banner-cls">
                                 </a>
                                 <div class="content cls-content">
                                     <div class="cls-heading">
@@ -135,10 +135,10 @@
                             <div class="card-product style-2 wow fadeInUp" data-wow-delay="0s">
                                 <div class="card-product-wrapper">
                                     <a href="product-detail.html" class="image-wrap">
-                                        <img class="lazyload img-product" data-src="images/shop/product-1.jpg"
-                                            src="images/shop/product-1.jpg" alt="image-product">
-                                        <img class="lazyload img-hover" data-src="images/shop/product-1.1.jpg"
-                                            src="images/shop/product-1.1.jpg" alt="image-product">
+                                        <img class="lazyload img-product" data-src="assets/client/images/shop/product-1.jpg"
+                                            src="assets/client/images/shop/product-1.jpg" alt="image-product">
+                                        <img class="lazyload img-hover" data-src="assets/client/images/shop/product-1.1.jpg"
+                                            src="assets/client/images/shop/product-1.1.jpg" alt="image-product">
                                     </a>
                                     <div class="list-product-btn">
                                         <a href="#shoppingCart" data-bs-toggle="modal" aria-controls="shoppingCart"
@@ -170,14 +170,14 @@
                                         <li class="list-color-item color-swatch active">
                                             <span class="d-none text-capitalize color-filter">Light Blue</span>
                                             <span class="swatch-value bg-light-blue"></span>
-                                            <img class="lazyload" data-src="images/shop/product-1.2.jpg"
-                                                src="images/shop/product-1.2.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-1.2.jpg"
+                                                src="assets/client/images/shop/product-1.2.jpg" alt="image-product">
                                         </li>
                                         <li class="list-color-item color-swatch">
                                             <span class="d-none text-capitalize color-filter">Light Blue</span>
                                             <span class="swatch-value bg-light-blue-2"></span>
-                                            <img class="lazyload" data-src="images/shop/product-1.3.jpg"
-                                                src="images/shop/product-1.3.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-1.3.jpg"
+                                                src="assets/client/images/shop/product-1.3.jpg" alt="image-product">
                                         </li>
                                     </ul>
                                 </div>
@@ -185,10 +185,10 @@
                             <div class="card-product style-2 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="card-product-wrapper">
                                     <a href="product-detail.html" class="image-wrap">
-                                        <img class="lazyload img-product" data-src="images/shop/product-2.jpg"
-                                            src="images/shop/product-2.jpg" alt="image-product">
-                                        <img class="lazyload img-hover" data-src="images/shop/product-2.1.jpg"
-                                            src="images/shop/product-2.1.jpg" alt="image-product">
+                                        <img class="lazyload img-product" data-src="assets/client/images/shop/product-2.jpg"
+                                            src="assets/client/images/shop/product-2.jpg" alt="image-product">
+                                        <img class="lazyload img-hover" data-src="assets/client/images/shop/product-2.1.jpg"
+                                            src="assets/client/images/shop/product-2.1.jpg" alt="image-product">
                                     </a>
                                     <div class="on-sale-wrap"><span class="on-sale-item">-25%</span>
                                     </div>
@@ -223,14 +223,14 @@
                                         <li class="list-color-item color-swatch active">
                                             <span class="d-none text-capitalize color-filter">Light Blue</span>
                                             <span class="swatch-value bg-light-blue"></span>
-                                            <img class="lazyload" data-src="images/shop/product-2.jpg"
-                                                src="images/shop/product-2.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-2.jpg"
+                                                src="assets/client/images/shop/product-2.jpg" alt="image-product">
                                         </li>
                                         <li class="list-color-item color-swatch">
                                             <span class="d-none text-capitalize color-filter">Light Blue</span>
                                             <span class="swatch-value bg-light-blue-2"></span>
-                                            <img class="lazyload" data-src="images/shop/product-2.2.jpg"
-                                                src="images/shop/product-2.2.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-2.2.jpg"
+                                                src="assets/client/images/shop/product-2.2.jpg" alt="image-product">
                                         </li>
                                     </ul>
                                 </div>
@@ -238,10 +238,10 @@
                             <div class="card-product style-2 wow fadeInUp" data-wow-delay="0.2s">
                                 <div class="card-product-wrapper">
                                     <a href="product-detail.html" class="image-wrap">
-                                        <img class="lazyload img-product" data-src="images/shop/product-3.jpg"
-                                            src="images/shop/product-3.jpg" alt="image-product">
-                                        <img class="lazyload img-hover" data-src="images/shop/product-3.1.jpg"
-                                            src="images/shop/product-3.1.jpg" alt="image-product">
+                                        <img class="lazyload img-product" data-src="assets/client/images/shop/product-3.jpg"
+                                            src="assets/client/images/shop/product-3.jpg" alt="image-product">
+                                        <img class="lazyload img-hover" data-src="assets/client/images/shop/product-3.1.jpg"
+                                            src="assets/client/images/shop/product-3.1.jpg" alt="image-product">
                                     </a>
                                     <div class="on-sale-wrap"><span class="on-sale-item">-25%</span>
                                     </div>
@@ -275,14 +275,14 @@
                                         <li class="list-color-item color-swatch active">
                                             <span class="d-none text-capitalize color-filter">Light Orange</span>
                                             <span class="swatch-value bg-light-orange"></span>
-                                            <img class="lazyload" data-src="images/shop/product-3.2.jpg"
-                                                src="images/shop/product-3.2.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-3.2.jpg"
+                                                src="assets/client/images/shop/product-3.2.jpg" alt="image-product">
                                         </li>
                                         <li class="list-color-item color-swatch">
                                             <span class="d-none text-capitalize color-filter">Light Grey</span>
                                             <span class="swatch-value bg-light-grey"></span>
-                                            <img class="lazyload" data-src="images/shop/product-3.3.jpg"
-                                                src="images/shop/product-3.3.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-3.3.jpg"
+                                                src="assets/client/images/shop/product-3.3.jpg" alt="image-product">
                                         </li>
                                     </ul>
                                 </div>
@@ -290,10 +290,10 @@
                             <div class="card-product style-2 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="card-product-wrapper">
                                     <a href="product-detail.html" class="image-wrap">
-                                        <img class="lazyload img-product" data-src="images/shop/product-4.jpg"
-                                            src="images/shop/product-4.jpg" alt="image-product">
-                                        <img class="lazyload img-hover" data-src="images/shop/product-4.1.jpg"
-                                            src="images/shop/product-4.1.jpg" alt="image-product">
+                                        <img class="lazyload img-product" data-src="assets/client/images/shop/product-4.jpg"
+                                            src="assets/client/images/shop/product-4.jpg" alt="image-product">
+                                        <img class="lazyload img-hover" data-src="assets/client/images/shop/product-4.1.jpg"
+                                            src="assets/client/images/shop/product-4.1.jpg" alt="image-product">
                                     </a>
                                     <div class="list-product-btn">
                                         <a href="#shoppingCart" data-bs-toggle="modal" aria-controls="shoppingCart"
@@ -324,20 +324,20 @@
                                         <li class="list-color-item color-swatch active">
                                             <span class="d-none text-capitalize color-filter">Light Brown</span>
                                             <span class="swatch-value bg-light-brown"></span>
-                                            <img class="lazyload" data-src="images/shop/product-4.2.jpg"
-                                                src="images/shop/product-4.2.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-4.2.jpg"
+                                                src="assets/client/images/shop/product-4.2.jpg" alt="image-product">
                                         </li>
                                         <li class="list-color-item color-swatch">
                                             <span class="d-none text-capitalize color-filter">Light Bink</span>
                                             <span class="swatch-value bg-light-pink"></span>
-                                            <img class="lazyload" data-src="images/shop/product-4.3.jpg"
-                                                src="images/shop/product-4.3.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-4.3.jpg"
+                                                src="assets/client/images/shop/product-4.3.jpg" alt="image-product">
                                         </li>
                                         <li class="list-color-item color-swatch">
                                             <span class="d-none text-capitalize color-filter">Light Grey</span>
                                             <span class="swatch-value bg-dark-grey-2"></span>
-                                            <img class="lazyload" data-src="images/shop/product-4.4.jpg"
-                                                src="images/shop/product-4.4.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-4.4.jpg"
+                                                src="assets/client/images/shop/product-4.4.jpg" alt="image-product">
                                         </li>
                                     </ul>
                                 </div>
@@ -345,10 +345,10 @@
                             <div class="card-product style-2 wow fadeInUp" data-wow-delay="0s">
                                 <div class="card-product-wrapper">
                                     <a href="product-detail.html" class="image-wrap">
-                                        <img class="lazyload img-product" data-src="images/shop/product-5.jpg"
-                                            src="images/shop/product-5.jpg" alt="image-product">
-                                        <img class="lazyload img-hover" data-src="images/shop/product-5.1.jpg"
-                                            src="images/shop/product-5.1.jpg" alt="image-product">
+                                        <img class="lazyload img-product" data-src="assets/client/images/shop/product-5.jpg"
+                                            src="assets/client/images/shop/product-5.jpg" alt="image-product">
+                                        <img class="lazyload img-hover" data-src="assets/client/images/shop/product-5.1.jpg"
+                                            src="assets/client/images/shop/product-5.1.jpg" alt="image-product">
                                     </a>
                                     <div class="on-sale-wrap"><span class="on-sale-item">-25%</span>
                                     </div>
@@ -382,14 +382,14 @@
                                         <li class="list-color-item color-swatch active">
                                             <span class="d-none text-capitalize color-filter">Light Orange</span>
                                             <span class="swatch-value bg-light-orange"></span>
-                                            <img class="lazyload" data-src="images/shop/product-5.2.jpg"
-                                                src="images/shop/product-5.2.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-5.2.jpg"
+                                                src="assets/client/images/shop/product-5.2.jpg" alt="image-product">
                                         </li>
                                         <li class="list-color-item color-swatch">
                                             <span class="d-none text-capitalize color-filter">Light Grey</span>
                                             <span class="swatch-value bg-light-grey"></span>
-                                            <img class="lazyload" data-src="images/shop/product-5.3.jpg"
-                                                src="images/shop/product-5.3.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-5.3.jpg"
+                                                src="assets/client/images/shop/product-5.3.jpg" alt="image-product">
                                         </li>
                                     </ul>
                                 </div>
@@ -397,10 +397,10 @@
                             <div class="card-product style-2 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="card-product-wrapper">
                                     <a href="product-detail.html" class="image-wrap">
-                                        <img class="lazyload img-product" data-src="images/shop/product-6.jpg"
-                                            src="images/shop/product-6.jpg" alt="image-product">
-                                        <img class="lazyload img-hover" data-src="images/shop/product-6.1.jpg"
-                                            src="images/shop/product-6.1.jpg" alt="image-product">
+                                        <img class="lazyload img-product" data-src="assets/client/images/shop/product-6.jpg"
+                                            src="assets/client/images/shop/product-6.jpg" alt="image-product">
+                                        <img class="lazyload img-hover" data-src="assets/client/images/shop/product-6.1.jpg"
+                                            src="assets/client/images/shop/product-6.1.jpg" alt="image-product">
                                     </a>
                                     <div class="list-product-btn">
                                         <a href="#shoppingCart" data-bs-toggle="modal" aria-controls="shoppingCart"
@@ -432,14 +432,14 @@
                                         <li class="list-color-item color-swatch active">
                                             <span class="d-none text-capitalize color-filter">Light Blue</span>
                                             <span class="swatch-value bg-light-blue"></span>
-                                            <img class="lazyload" data-src="images/shop/product-6.jpg"
-                                                src="images/shop/product-6.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-6.jpg"
+                                                src="assets/client/images/shop/product-6.jpg" alt="image-product">
                                         </li>
                                         <li class="list-color-item color-swatch">
                                             <span class="d-none text-capitalize color-filter">Light Blue</span>
                                             <span class="swatch-value bg-light-blue-2"></span>
-                                            <img class="lazyload" data-src="images/shop/product-6.2.jpg"
-                                                src="images/shop/product-6.2.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-6.2.jpg"
+                                                src="assets/client/images/shop/product-6.2.jpg" alt="image-product">
                                         </li>
                                     </ul>
                                 </div>
@@ -447,10 +447,10 @@
                             <div class="card-product style-2 wow fadeInUp" data-wow-delay="0.2s">
                                 <div class="card-product-wrapper">
                                     <a href="product-detail.html" class="image-wrap">
-                                        <img class="lazyload img-product" data-src="images/shop/product-7.jpg"
-                                            src="images/shop/product-7.jpg" alt="image-product">
-                                        <img class="lazyload img-hover" data-src="images/shop/product-7.1.jpg"
-                                            src="images/shop/product-7.1.jpg" alt="image-product">
+                                        <img class="lazyload img-product" data-src="assets/client/images/shop/product-7.jpg"
+                                            src="assets/client/images/shop/product-7.jpg" alt="image-product">
+                                        <img class="lazyload img-hover" data-src="assets/client/images/shop/product-7.1.jpg"
+                                            src="assets/client/images/shop/product-7.1.jpg" alt="image-product">
                                     </a>
                                     <div class="on-sale-wrap"><span class="on-sale-item">-25%</span>
                                     </div>
@@ -484,14 +484,14 @@
                                         <li class="list-color-item color-swatch active">
                                             <span class="d-none text-capitalize color-filter">Light Blue</span>
                                             <span class="swatch-value bg-light-blue"></span>
-                                            <img class="lazyload" data-src="images/shop/product-7.2.jpg"
-                                                src="images/shop/product-7.2.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-7.2.jpg"
+                                                src="assets/client/images/shop/product-7.2.jpg" alt="image-product">
                                         </li>
                                         <li class="list-color-item color-swatch">
                                             <span class="d-none text-capitalize color-filter">Light Blue</span>
                                             <span class="swatch-value bg-light-blue-2"></span>
-                                            <img class="lazyload" data-src="images/shop/product-7.3.jpg"
-                                                src="images/shop/product-7.3.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-7.3.jpg"
+                                                src="assets/client/images/shop/product-7.3.jpg" alt="image-product">
                                         </li>
                                     </ul>
                                 </div>
@@ -499,10 +499,10 @@
                             <div class="card-product style-2 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="card-product-wrapper">
                                     <a href="product-detail.html" class="image-wrap">
-                                        <img class="lazyload img-product" data-src="images/shop/product-8.jpg"
-                                            src="images/shop/product-8.jpg" alt="image-product">
-                                        <img class="lazyload img-hover" data-src="images/shop/product-8.1.jpg"
-                                            src="images/shop/product-8.1.jpg" alt="image-product">
+                                        <img class="lazyload img-product" data-src="assets/client/images/shop/product-8.jpg"
+                                            src="assets/client/images/shop/product-8.jpg" alt="image-product">
+                                        <img class="lazyload img-hover" data-src="assets/client/images/shop/product-8.1.jpg"
+                                            src="assets/client/images/shop/product-8.1.jpg" alt="image-product">
                                     </a>
                                     <div class="list-product-btn">
                                         <a href="#shoppingCart" data-bs-toggle="modal" aria-controls="shoppingCart"
@@ -533,20 +533,20 @@
                                         <li class="list-color-item color-swatch active">
                                             <span class="d-none text-capitalize color-filter">Light Brown</span>
                                             <span class="swatch-value bg-light-brown"></span>
-                                            <img class="lazyload" data-src="images/shop/product-8.2.jpg"
-                                                src="images/shop/product-8.2.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-8.2.jpg"
+                                                src="assets/client/images/shop/product-8.2.jpg" alt="image-product">
                                         </li>
                                         <li class="list-color-item color-swatch">
                                             <span class="d-none text-capitalize color-filter">Light Bink</span>
                                             <span class="swatch-value bg-light-pink"></span>
-                                            <img class="lazyload" data-src="images/shop/product-8.3.jpg"
-                                                src="images/shop/product-8.3.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-8.3.jpg"
+                                                src="assets/client/images/shop/product-8.3.jpg" alt="image-product">
                                         </li>
                                         <li class="list-color-item color-swatch">
                                             <span class="d-none text-capitalize color-filter">Light Grey</span>
                                             <span class="swatch-value bg-dark-grey-2"></span>
-                                            <img class="lazyload" data-src="images/shop/product-8.4.jpg"
-                                                src="images/shop/product-8.4.jpg" alt="image-product">
+                                            <img class="lazyload" data-src="assets/client/images/shop/product-8.4.jpg"
+                                                src="assets/client/images/shop/product-8.4.jpg" alt="image-product">
                                         </li>
                                     </ul>
                                 </div>
@@ -562,8 +562,8 @@
             <div class="flat-img-with-text-5">
                 <div class="collection-position hover-img style-6">
                     <div class="img-style ">
-                        <img class="lazyload effect-paralax" data-src="images/banner/banner-4.jpg"
-                            src="images/banner/banner-4.jpg" alt="banner-cls">
+                        <img class="lazyload effect-paralax" data-src="assets/client/images/banner/banner-4.jpg"
+                            src="assets/client/images/banner/banner-4.jpg" alt="banner-cls">
                     </div>
                     <div class="content cls-content w-full">
                         <div class="cls-heading gap-8 mb_22">
@@ -576,8 +576,8 @@
                 </div>
                 <div class="collection-position hover-img style-6">
                     <div class="img-style ">
-                        <img class="lazyload effect-paralax" data-src="images/banner/banner-5.jpg"
-                            src="images/banner/banner-5.jpg" alt="banner-cls">
+                        <img class="lazyload effect-paralax" data-src="assets/client/images/banner/banner-5.jpg"
+                            src="assets/client/images/banner/banner-5.jpg" alt="banner-cls">
                     </div>
                     <div class="content cls-content w-full">
                         <div class="cls-heading gap-8 mb_22">
@@ -611,10 +611,10 @@
                         <div class="card-product style-1">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
-                                    <img class="lazyload img-product" data-src="images/shop/product-10.jpg"
-                                        src="images/shop/product-10.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/shop/product-10.1.jpg"
-                                        src="images/shop/product-10.1.jpg" alt="image-product">
+                                    <img class="lazyload img-product" data-src="assets/client/images/shop/product-10.jpg"
+                                        src="assets/client/images/shop/product-10.jpg" alt="image-product">
+                                    <img class="lazyload img-hover" data-src="assets/client/images/shop/product-10.1.jpg"
+                                        src="assets/client/images/shop/product-10.1.jpg" alt="image-product">
                                 </a>
                                 <div class="list-product-btn">
                                     <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
@@ -647,15 +647,15 @@
                                         <span class="d-none text-capitalize color-filter">Light
                                             Blue</span>
                                         <span class="swatch-value bg-light-blue"></span>
-                                        <img class="lazyload" data-src="images/shop/product-10.2.jpg"
-                                            src="images/shop/product-10.2.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-10.2.jpg"
+                                            src="assets/client/images/shop/product-10.2.jpg" alt="image-product">
                                     </li>
                                     <li class="list-color-item color-swatch">
                                         <span class="d-none text-capitalize color-filter">Light
                                             Blue</span>
                                         <span class="swatch-value bg-light-blue-2"></span>
-                                        <img class="lazyload" data-src="images/shop/product-10.3.jpg"
-                                            src="images/shop/product-10.3.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-10.3.jpg"
+                                            src="assets/client/images/shop/product-10.3.jpg" alt="image-product">
                                     </li>
                                 </ul>
                             </div>
@@ -665,10 +665,10 @@
                         <div class="card-product style-1">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
-                                    <img class="lazyload img-product" data-src="images/shop/product-11.jpg"
-                                        src="images/shop/product-11.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/shop/product-11.1.jpg"
-                                        src="images/shop/product-11.1.jpg" alt="image-product">
+                                    <img class="lazyload img-product" data-src="assets/client/images/shop/product-11.jpg"
+                                        src="assets/client/images/shop/product-11.jpg" alt="image-product">
+                                    <img class="lazyload img-hover" data-src="assets/client/images/shop/product-11.1.jpg"
+                                        src="assets/client/images/shop/product-11.1.jpg" alt="image-product">
                                 </a>
                                 <div class="on-sale-wrap"><span class="on-sale-item">-25%</span>
                                 </div>
@@ -702,15 +702,15 @@
                                         <span class="d-none text-capitalize color-filter">Light
                                             Orange</span>
                                         <span class="swatch-value bg-light-orange"></span>
-                                        <img class="lazyload" data-src="images/shop/product-11.2.jpg"
-                                            src="images/shop/product-11.2.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-11.2.jpg"
+                                            src="assets/client/images/shop/product-11.2.jpg" alt="image-product">
                                     </li>
                                     <li class="list-color-item color-swatch">
                                         <span class="d-none text-capitalize color-filter">Light
                                             Grey</span>
                                         <span class="swatch-value bg-light-grey"></span>
-                                        <img class="lazyload" data-src="images/shop/product-11.3.jpg"
-                                            src="images/shop/product-11.3.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-11.3.jpg"
+                                            src="assets/client/images/shop/product-11.3.jpg" alt="image-product">
                                     </li>
                                 </ul>
                             </div>
@@ -720,10 +720,10 @@
                         <div class="card-product style-1">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
-                                    <img class="lazyload img-product" data-src="images/shop/product-12.jpg"
-                                        src="images/shop/product-12.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/shop/product-12.1.jpg"
-                                        src="images/shop/product-12.1.jpg" alt="image-product">
+                                    <img class="lazyload img-product" data-src="assets/client/images/shop/product-12.jpg"
+                                        src="assets/client/images/shop/product-12.jpg" alt="image-product">
+                                    <img class="lazyload img-hover" data-src="assets/client/images/shop/product-12.1.jpg"
+                                        src="assets/client/images/shop/product-12.1.jpg" alt="image-product">
                                 </a>
                                 <div class="list-product-btn">
                                     <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
@@ -754,22 +754,22 @@
                                         <span class="d-none text-capitalize color-filter">Light
                                             Brown</span>
                                         <span class="swatch-value bg-light-brown"></span>
-                                        <img class="lazyload" data-src="images/shop/product-12.2.jpg"
-                                            src="images/shop/product-12.2.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-12.2.jpg"
+                                            src="assets/client/images/shop/product-12.2.jpg" alt="image-product">
                                     </li>
                                     <li class="list-color-item color-swatch">
                                         <span class="d-none text-capitalize color-filter">Light
                                             Bink</span>
                                         <span class="swatch-value bg-light-pink"></span>
-                                        <img class="lazyload" data-src="images/shop/product-12.3.jpg"
-                                            src="images/shop/product-12.3.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-12.3.jpg"
+                                            src="assets/client/images/shop/product-12.3.jpg" alt="image-product">
                                     </li>
                                     <li class="list-color-item color-swatch">
                                         <span class="d-none text-capitalize color-filter">Light
                                             Grey</span>
                                         <span class="swatch-value bg-dark-grey-2"></span>
-                                        <img class="lazyload" data-src="images/shop/product-12.4.jpg"
-                                            src="images/shop/product-12.4.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-12.4.jpg"
+                                            src="assets/client/images/shop/product-12.4.jpg" alt="image-product">
                                     </li>
                                 </ul>
                             </div>
@@ -779,10 +779,10 @@
                         <div class="card-product style-1">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
-                                    <img class="lazyload img-product" data-src="images/shop/product-1.jpg"
-                                        src="images/shop/product-1.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/shop/product-1.1.jpg"
-                                        src="images/shop/product-1.1.jpg" alt="image-product">
+                                    <img class="lazyload img-product" data-src="assets/client/images/shop/product-1.jpg"
+                                        src="assets/client/images/shop/product-1.jpg" alt="image-product">
+                                    <img class="lazyload img-hover" data-src="assets/client/images/shop/product-1.1.jpg"
+                                        src="assets/client/images/shop/product-1.1.jpg" alt="image-product">
                                 </a>
                                 <div class="list-product-btn">
                                     <a href="javascript:void(0);" class="box-icon wishlist btn-icon-action">
@@ -814,15 +814,15 @@
                                         <span class="d-none text-capitalize color-filter">Light
                                             Blue</span>
                                         <span class="swatch-value bg-light-blue"></span>
-                                        <img class="lazyload" data-src="images/shop/product-1.2.jpg"
-                                            src="images/shop/product-1.2.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-1.2.jpg"
+                                            src="assets/client/images/shop/product-1.2.jpg" alt="image-product">
                                     </li>
                                     <li class="list-color-item color-swatch">
                                         <span class="d-none text-capitalize color-filter">Light
                                             Blue</span>
                                         <span class="swatch-value bg-light-blue-2"></span>
-                                        <img class="lazyload" data-src="images/shop/product-1.3.jpg"
-                                            src="images/shop/product-1.3.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-1.3.jpg"
+                                            src="assets/client/images/shop/product-1.3.jpg" alt="image-product">
                                     </li>
                                 </ul>
                             </div>
@@ -832,10 +832,10 @@
                         <div class="card-product style-1">
                             <div class="card-product-wrapper">
                                 <a href="product-detail.html" class="image-wrap">
-                                    <img class="lazyload img-product" data-src="images/shop/product-9.jpg"
-                                        src="images/shop/product-9.jpg" alt="image-product">
-                                    <img class="lazyload img-hover" data-src="images/shop/product-9.1.jpg"
-                                        src="images/shop/product-9.1.jpg" alt="image-product">
+                                    <img class="lazyload img-product" data-src="assets/client/images/shop/product-9.jpg"
+                                        src="assets/client/images/shop/product-9.jpg" alt="image-product">
+                                    <img class="lazyload img-hover" data-src="assets/client/images/shop/product-9.1.jpg"
+                                        src="assets/client/images/shop/product-9.1.jpg" alt="image-product">
                                 </a>
                                 <div class="on-sale-wrap"><span class="on-sale-item">-25%</span></div>
                                 <div class="list-product-btn">
@@ -869,15 +869,15 @@
                                         <span class="d-none text-capitalize color-filter">Light
                                             Blue</span>
                                         <span class="swatch-value bg-light-blue"></span>
-                                        <img class="lazyload" data-src="images/shop/product-9.2.jpg"
-                                            src="images/shop/product-9.2.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-9.2.jpg"
+                                            src="assets/client/images/shop/product-9.2.jpg" alt="image-product">
                                     </li>
                                     <li class="list-color-item color-swatch">
                                         <span class="d-none text-capitalize color-filter">Light
                                             Blue</span>
                                         <span class="swatch-value bg-light-blue-2"></span>
-                                        <img class="lazyload" data-src="images/shop/product-9.3.jpg"
-                                            src="images/shop/product-9.3.jpg" alt="image-product">
+                                        <img class="lazyload" data-src="assets/client/images/shop/product-9.3.jpg"
+                                            src="assets/client/images/shop/product-9.3.jpg" alt="image-product">
                                     </li>
                                 </ul>
                             </div>
@@ -905,8 +905,8 @@
                 <div class="row flat-with-text-lookbook wrap-lookbook-hover align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div class="banner-img">
-                            <img class="lazyload" data-src="images/section/section-discover-1.jpg"
-                                src="images/section/section-discover-1.jpg" alt="banner">
+                            <img class="lazyload" data-src="assets/client/images/section/section-discover-1.jpg"
+                                src="assets/client/images/section/section-discover-1.jpg" alt="banner">
                             <div class="tf-pin-btn pin-1 bundle-pin-item swiper-button" data-slide="0"
                                 id="pin1">
                                 <span>1</span>
@@ -914,7 +914,7 @@
                                 <div class="loobook-product-wrap">
                                     <div class="loobook-product">
                                         <div class="img-style">
-                                            <img src="images/gallery/lookbook-3.jpg" alt="img">
+                                            <img src="assets/client/images/gallery/lookbook-3.jpg" alt="img">
                                         </div>
                                         <div class="content">
                                             <div class="info">
@@ -934,7 +934,7 @@
                                 <div class="loobook-product-wrap">
                                     <div class="loobook-product">
                                         <div class="img-style">
-                                            <img src="images/gallery/lookbook-1.jpg" alt="img">
+                                            <img src="assets/client/images/gallery/lookbook-1.jpg" alt="img">
                                         </div>
                                         <div class="content">
                                             <div class="info">
@@ -954,7 +954,7 @@
                                 <div class="loobook-product-wrap">
                                     <div class="loobook-product">
                                         <div class="img-style">
-                                            <img src="images/gallery/lookbook-2.jpg" alt="img">
+                                            <img src="assets/client/images/gallery/lookbook-2.jpg" alt="img">
                                         </div>
                                         <div class="content">
                                             <div class="info">
@@ -982,7 +982,7 @@
                                         1
                                     </h6>
                                     <div class="image-cart">
-                                        <img src="images/shop/cart-item-1.jpg" alt="">
+                                        <img src="assets/client/images/shop/cart-item-1.jpg" alt="">
                                     </div>
                                     <div class="info">
                                         <h6 class="name">
@@ -1000,7 +1000,7 @@
                                         2
                                     </h6>
                                     <div class="image-cart">
-                                        <img src="images/shop/cart-item-2.jpg" alt="">
+                                        <img src="assets/client/images/shop/cart-item-2.jpg" alt="">
                                     </div>
                                     <div class="info">
                                         <h6 class="name">
@@ -1018,7 +1018,7 @@
                                         3
                                     </h6>
                                     <div class="image-cart">
-                                        <img src="images/shop/cart-item-3.jpg" alt="">
+                                        <img src="assets/client/images/shop/cart-item-3.jpg" alt="">
                                     </div>
                                     <div class="info">
                                         <h6 class="name">
@@ -1161,7 +1161,7 @@
                                             </div>
                                             <div class="box-product">
                                                 <div class="product-img avt-62 round">
-                                                    <img src="images/shop/testimonials-item-1.jpg" alt="avt">
+                                                    <img src="assets/client/images/shop/testimonials-item-1.jpg" alt="avt">
                                                 </div>
                                                 <div class="box-price">
                                                     <p class="text-title  text-line-clamp-1"> <a href="product-detail.html"
@@ -1212,7 +1212,7 @@
                                             </div>
                                             <div class="box-product">
                                                 <div class="product-img avt-62 round">
-                                                    <img src="images/shop/testimonials-item-2.jpg" alt="avt">
+                                                    <img src="assets/client/images/shop/testimonials-item-2.jpg" alt="avt">
                                                 </div>
                                                 <div class="box-price">
                                                     <p class="text-title  text-line-clamp-1"> <a href="product-detail.html"
@@ -1263,7 +1263,7 @@
                                             </div>
                                             <div class="box-product">
                                                 <div class="product-img avt-62 round">
-                                                    <img src="images/shop/testimonials-item-3.jpg" alt="avt">
+                                                    <img src="assets/client/images/shop/testimonials-item-3.jpg" alt="avt">
                                                 </div>
                                                 <div class="box-price">
                                                     <p class="text-title  text-line-clamp-1"> <a href="product-detail.html"
@@ -1314,7 +1314,7 @@
                                             </div>
                                             <div class="box-product">
                                                 <div class="product-img avt-62 round">
-                                                    <img src="images/shop/testimonials-item-1.jpg" alt="avt">
+                                                    <img src="assets/client/images/shop/testimonials-item-1.jpg" alt="avt">
                                                 </div>
                                                 <div class="box-price">
                                                     <p class="text-title  text-line-clamp-1"> <a href="product-detail.html"
@@ -1351,7 +1351,7 @@
                     <div class="col-lg-6 col-xl-7">
                         <div class="collection-position style-2 spacing-2 has-over">
                             <a href="product-detail.html" class="img-style no-opacity w-100">
-                                <img class="lazyload " data-src="images/banner/banner-10.jpg" src="images/banner/banner-10.jpg" alt="banner-cls">
+                                <img class="lazyload " data-src="assets/client/images/banner/banner-10.jpg" src="assets/client/images/banner/banner-10.jpg" alt="banner-cls">
                             </a>
                             <div class="content cls-content">
                                 <div class="cls-heading">
@@ -1375,7 +1375,7 @@
                             <div class="relatest-post-item style-2 style-row hover-image">
                                 <div class="image">
                                     <a href="blog-details.html">
-                                        <img class="lazyload" data-src="images/banner/banner-11.jpg" src="images/banner/banner-11.jpg" alt="">
+                                        <img class="lazyload" data-src="assets/client/images/banner/banner-11.jpg" src="assets/client/images/banner/banner-11.jpg" alt="">
                                     </a>
                                     <div class="article-label">
                                         <a href="#" class="text-button-small">Guides</a>
@@ -1396,7 +1396,7 @@
                             <div class="relatest-post-item style-2 style-row hover-image">
                                 <div class="image">
                                     <a href="blog-details.html">
-                                        <img class="lazyload" data-src="images/banner/banner-12.jpg" src="images/banner/banner-12.jpg" alt="">
+                                        <img class="lazyload" data-src="assets/client/images/banner/banner-12.jpg" src="assets/client/images/banner/banner-12.jpg" alt="">
                                     </a>
                                     <div class="article-label">
                                         <a href="#" class="text-button-small">Tech </a>
@@ -1440,8 +1440,8 @@
                     <div class="swiper-slide">
                         <div class="gallery-item hover-overlay hover-img">
                             <div class="img-style">
-                                <img class="lazyload img-hover" data-src="images/gallery/gallery-1.jpg"
-                                    src="images/gallery/gallery-1.jpg" alt="image-gallery">
+                                <img class="lazyload img-hover" data-src="assets/client/images/gallery/gallery-1.jpg"
+                                    src="assets/client/images/gallery/gallery-1.jpg" alt="image-gallery">
                             </div>
                             <a href="product-detail.html" class="box-icon hover-tooltip"><span
                                     class="icon icon-eye"></span> <span class="tooltip">View Product</span></a>
@@ -1450,8 +1450,8 @@
                     <div class="swiper-slide">
                         <div class="gallery-item hover-overlay hover-img">
                             <div class="img-style">
-                                <img class="lazyload img-hover" data-src="images/gallery/gallery-2.jpg"
-                                    src="images/gallery/gallery-2.jpg" alt="image-gallery">
+                                <img class="lazyload img-hover" data-src="assets/client/images/gallery/gallery-2.jpg"
+                                    src="assets/client/images/gallery/gallery-2.jpg" alt="image-gallery">
                             </div>
                             <a href="product-detail.html" class="box-icon hover-tooltip"><span
                                     class="icon icon-eye"></span> <span class="tooltip">View Product</span></a>
@@ -1460,8 +1460,8 @@
                     <div class="swiper-slide">
                         <div class="gallery-item hover-overlay hover-img">
                             <div class="img-style">
-                                <img class="lazyload img-hover" data-src="images/gallery/gallery-3.jpg"
-                                    src="images/gallery/gallery-3.jpg" alt="image-gallery">
+                                <img class="lazyload img-hover" data-src="assets/client/images/gallery/gallery-3.jpg"
+                                    src="assets/client/images/gallery/gallery-3.jpg" alt="image-gallery">
                             </div>
                             <a href="product-detail.html" class="box-icon hover-tooltip"><span
                                     class="icon icon-eye"></span> <span class="tooltip">View Product</span></a>
@@ -1470,8 +1470,8 @@
                     <div class="swiper-slide">
                         <div class="gallery-item hover-overlay hover-img">
                             <div class="img-style">
-                                <img class="lazyload img-hover" data-src="images/gallery/gallery-4.jpg"
-                                    src="images/gallery/gallery-4.jpg" alt="image-gallery">
+                                <img class="lazyload img-hover" data-src="assets/client/images/gallery/gallery-4.jpg"
+                                    src="assets/client/images/gallery/gallery-4.jpg" alt="image-gallery">
                             </div>
                             <a href="product-detail.html" class="box-icon hover-tooltip"><span
                                     class="icon icon-eye"></span> <span class="tooltip">View Product</span></a>
@@ -1480,8 +1480,8 @@
                     <div class="swiper-slide">
                         <div class="gallery-item hover-overlay hover-img">
                             <div class="img-style">
-                                <img class="lazyload img-hover" data-src="images/gallery/gallery-5.jpg"
-                                    src="images/gallery/gallery-5.jpg" alt="image-gallery">
+                                <img class="lazyload img-hover" data-src="assets/client/images/gallery/gallery-5.jpg"
+                                    src="assets/client/images/gallery/gallery-5.jpg" alt="image-gallery">
                             </div>
                             <a href="product-detail.html" class="box-icon hover-tooltip"><span
                                     class="icon icon-eye"></span> <span class="tooltip">View Product</span></a>
@@ -1490,8 +1490,8 @@
                     <div class="swiper-slide">
                         <div class="gallery-item hover-overlay hover-img">
                             <div class="img-style">
-                                <img class="lazyload img-hover" data-src="images/gallery/gallery-6.jpg"
-                                    src="images/gallery/gallery-6.jpg" alt="image-gallery">
+                                <img class="lazyload img-hover" data-src="assets/client/images/gallery/gallery-6.jpg"
+                                    src="assets/client/images/gallery/gallery-6.jpg" alt="image-gallery">
                             </div>
                             <a href="product-detail.html" class="box-icon hover-tooltip"><span
                                     class="icon icon-eye"></span> <span class="tooltip">View Product</span></a>
