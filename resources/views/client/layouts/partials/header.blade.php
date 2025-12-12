@@ -522,4 +522,3 @@
             </div>
             <div class="sw-dots slider-home2-pagination type-circle no-border justify-content-center"></div>
         </div><!-- /.silideshow  -->
-        <h1>test</h1>
