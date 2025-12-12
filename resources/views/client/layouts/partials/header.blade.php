@@ -43,7 +43,7 @@
                     <div class="col-xl-4">
                         <div class="topbar-right justify-content-end d-none d-xl-flex">
                             <a href="{{ route('client.about') }}" class="text_white text-caption-1 link">About</a>
-                            <a href="contact.html" class="text_white text-caption-1 link">Contact</a>
+                            <a href="{{ route('client.contact') }}" class="text_white text-caption-1 link">Contact</a>
                             <a href="store-list.html" class="text_white text-caption-1 link">Location</a>
                         </div>
                     </div>
@@ -309,7 +309,7 @@
                                                 <li><a href="faqs.html" class="menu-link-text">Faqs</a></li>
                                                 <li><a href="store-list.html" class="menu-link-text">Store List</a></li>
                                                 <li><a href="term-of-use.html" class="menu-link-text">Term Of Use</a></li>
-                                                <li><a href="contact.html" class="menu-link-text">Contact Us</a></li>
+                                                <li><a href="{{ route('client.contact') }}" class="menu-link-text">Contact Us</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -425,7 +425,7 @@
                                 <a href="product-detail.html" class="text-title title text_white">Ergonomic Chair Pro</a>
                                 <div class="text-button text_white">$69.99</div>
                                 <a href="#quickView" data-bs-toggle="modal" class="text-button-small link text_white text-decoration">Quick View</a>
-                            </div>
+                            </div>  
                         </div>
                     </div>
                     <div class="swiper-slide">

@@ -1,11 +1,12 @@
 @extends('client.layouts.master')
-@section('content')
+@section(section: 'content')
+
        <section class="flat-spacing-2">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="heading-section text-center">
-                            <h3 class="wow fadeInUp">Shop By Categories</h3>
+                            <h3 class="wow fadeInUp">Danh mục sản phảm</h3>
                             <p class="text-body-default text_secondary wow fadeInUp" data-wow-delay="0.1s">Fresh styles just in! Elevate your look.</p>
                         </div>
                         <div class="wrap-categories overflow-x-auto style-2 has-boxshadow">
@@ -136,7 +137,7 @@
                                 <div class="card-product-wrapper">
                                     <a href="product-detail.html" class="image-wrap">
                                         <img class="lazyload img-product" data-src="images/shop/product-1.jpg"
-                                            src="images/shop/product-1.jpg" alt="image-product">
+                                            src="" alt="image-product">
                                         <img class="lazyload img-hover" data-src="images/shop/product-1.1.jpg"
                                             src="images/shop/product-1.1.jpg" alt="image-product">
                                     </a>
