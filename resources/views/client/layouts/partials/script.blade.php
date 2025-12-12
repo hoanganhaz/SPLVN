@@ -1,0 +1,12 @@
+ <script type="text/javascript" src="{{asset('assets/client/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/swiper-bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/carousel.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/bootstrap-select.min.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/lazysize.min.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/bootstrap-select.min.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/wow.min.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/multiple-modal.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/parallax.min.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/simpleParallaxVanilla.umd.js') }}"></script>
+    <script type="text/javascript" src="{{asset('assets/client/js/main.js') }}"></script>

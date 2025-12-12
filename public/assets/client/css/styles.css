@@ -1208,28 +1208,12 @@ a:focus, a:hover {
   margin-top: 10px;
 }
 
-/* Preload 
-------------------------------------------- */
-.preload-wrapper .preload-container {
-  display: flex;
-}
 
-.preload-container {
-  display: none;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 99999999999;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+/* Preload 
+
+------------------------------------------- */
+
+
 
 .spinner {
   width: 60px;
@@ -12139,6 +12123,7 @@ ul.list-text.type-number {
   .tf-img-with-text-3 .sw-product-single-next {
     right: 0;
   }
+  
 }
 
 /*# sourceMappingURL=styles.css.map */
