@@ -16,3 +16,5 @@ use App\Http\Controllers\Client\HomeController;
 
 Route::get("/", [HomeController::class, 'index'])->name('client.home');
 Route::get("/about", [HomeController::class, 'about'])->name('client.about');
+Route::get("/contact", [HomeController::class, 'contact'])->name('client.contact');
+
