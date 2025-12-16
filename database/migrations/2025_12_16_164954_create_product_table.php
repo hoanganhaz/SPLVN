@@ -14,9 +14,20 @@ return new class extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->id();
             $table->string('name', 199);
+            $table->string('code', 199);
             $table->string('slug', 255)->unique();
             $table->string('image', 255)->nullable();
+            $table->tinyInteger('status')
+                  ->default(1)
+                  ->comment('1: active, 0: inactive');
             $table->double('price', 10, 2);
+            $table->string('length')->nullable();
+            $table->string('width')->nullable();
+            $table->string('wing_eyelids')->nullable();
+            $table->string('paint_technology')->nullable();
+            $table->string('key')->nullable();
+            $table->string('hinge')->nullable();
+            $table->string('design')->nullable();
             $table->double('sale_price', 10, 2)->nullable();
             $table->text('description')->nullable();
             $table->foreignId('category_id')->constrained();
