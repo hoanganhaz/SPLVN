@@ -521,4 +521,5 @@
                 <div class="sw-button swiper-button-next line-default slider-home2-next"></div>
             </div>
             <div class="sw-dots slider-home2-pagination type-circle no-border justify-content-center"></div>
-        </div>
+        </div><!-- /.silideshow  -->
+       
