@@ -853,7 +853,15 @@
             <!-- /.sidebar -->
         </aside>
 
-        @yield('body')
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content p-4">
+                <div class="container-fluid">
+                    @yield('body')
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
@@ -887,6 +895,7 @@
     {{-- <script src="{{ asset('/asset/admin/') }}/dist/js/demo.js"></script> --}}
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('/asset/admin/') }}/dist/js/pages/dashboard3.js"></script>
+
     @yield('script')
 </body>
 
