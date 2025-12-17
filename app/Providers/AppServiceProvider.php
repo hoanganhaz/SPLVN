@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use App\Models\Contract;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Share count of new contacts to admin layout header
+        View::composer('admin.layout', function ($view) {
+            $newContacts = 0;
+            try {
+                $newContacts = Contract::where('status', 0)->count();
+            } catch (\Throwable $e) {
+                // ignore DB errors when running migrations or during CLI tasks
+                $newContacts = 0;
+            }
+            $view->with('newContactsCount', $newContacts);
+        });
     }
 }

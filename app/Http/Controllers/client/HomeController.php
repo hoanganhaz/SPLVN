@@ -15,8 +15,5 @@ public function about()
     {
         return view('client.about');
     }
-    public function contact()
-    {
-        return view('client.contact');
-    }
+   
 }

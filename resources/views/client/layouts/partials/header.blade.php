@@ -4,16 +4,13 @@
                     <div class="col-xl-4">
                         <div class="topbar-left d-none d-xl-flex">
                             <div class="tf-languages">
-                                <select class="image-select center style-default color-white type-languages">
-                                    <option>English</option>
-                                    <option>Vietnam</option>
-                                </select>
+                                <p class="text-caption-1 text_white">
+                                          Hotline: 0986512929
+                                            
+                                        </p>
                             </div>
                             <div class="tf-currencies">
-                                <select class="image-select center style-default color-white type-currencies">
-                                    <option selected data-thumbnail="assets/client/images/country/us.svg">USD</option>
-                                    <option data-thumbnail="assets/client/images/country/vn.svg">VND</option>
-                                </select>
+                                
                             </div>
                         </div>
                     </div>
@@ -42,9 +39,9 @@
                     </div>
                     <div class="col-xl-4">
                         <div class="topbar-right justify-content-end d-none d-xl-flex">
-                            <a href="{{ route('client.about') }}" class="text_white text-caption-1 link">About</a>
-                            <a href="{{ route('client.contact') }}" class="text_white text-caption-1 link">Contact</a>
-                            <a href="store-list.html" class="text_white text-caption-1 link">Location</a>
+                            <a href="{{ route('client.about') }}" class="text_white text-caption-1 link">Giới Thiệu</a>
+                            <a href="{{ route('client.contact') }}" class="text_white text-caption-1 link">Liên Hệ</a>
+                            <a href="store-list.html" class="text_white text-caption-1 link">Sản Phẩm</a>
                         </div>
                     </div>
                 </div>
@@ -463,14 +460,12 @@
                             </div>
                             <div class="box-content">
                                 <div class="box-title">
-                                    <div class="text-white text-display fade-item fade-1">Ergonomic <br> Seating Solutions
+                                    <div class="text-white text-display fade-item fade-1">Chất Lượng <br> Đặt Lên Hàng Đầu
                                     </div>
-                                    <p class="text-body-1 text_white fade-item fade-item-2">Boost comfort and
-                                        productivity with ergonomic seating.</p>
+                                    <p class="text-body-1 text_white fade-item fade-item-2">Liên hệ đặt hàng ngay để được tư vấn sớm nhất.</p>
                                 </div>
                                 <div class="fade-item fade-item-3">
-                                    <a href="product-detail.html" class="tf-btn btn-white mx-auto ">Explore
-                                        Collection <i class="icon-arrow-up-right"></i></a>
+                                    <a href="product-detail.html" class="tf-btn btn-white mx-auto ">Liên Hệ Đặt Hàng <i class="icon-arrow-up-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -482,14 +477,12 @@
                             </div>
                             <div class="box-content">
                                 <div class="box-title">
-                                    <div class="text-white text-display fade-item fade-1">Innovative <br> Storage Solutions
-                                    </div>
-                                    <p class="text-body-1 text_white fade-item fade-item-2">Boost comfort and
-                                        productivity with ergonomic seating.</p>
+                                    <div class="text-white text-display fade-item fade-1">Đẳng Cấp <br> Tạo nên Sự Khác biệt
+                                    <p class="text-body-1 text_white fade-item fade-item-2">Liên hệ đặt hàng ngay để được tư vấn sớm nhất.</p>
                                 </div>
                                 <div class="fade-item fade-item-3">
-                                    <a href="product-detail.html" class="tf-btn btn-white mx-auto ">Explore
-                                        Collection <i class="icon-arrow-up-right"></i></a>
+                                    <a href="product-detail.html" class="tf-btn btn-white mx-auto ">Liên Hệ Đặt Hàng
+                                         <i class="icon-arrow-up-right"></i></a>
                                 </div>
                             </div>
                         </div>
