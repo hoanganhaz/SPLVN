@@ -3,12 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Brand;
 use App\Models\Category;
-use App\Models\Color;
 use App\Models\Product;
-use App\Models\ProductVariant;
-use App\Models\Size;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -16,139 +12,97 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::query()
-            ->where('soft_delete', 0)
-            ->orderByDesc('id')
-            ->paginate(10);
-
-        return view(
-            'admin.products.index',
-            compact('products')
-        );
+        $products = Product::with('category')->latest()->get();
+        return view('admin.products.index', compact('products'));
     }
 
     public function create()
     {
         $categories = Category::all();
-        $brands = Brand::all();
-        $colors = Color::all();
-        $sizes = Size::all();
-        return view(
-            'admin.products.create',
-            compact('categories', 'colors', 'sizes', 'brands')
-        );
+        return view('admin.products.create', compact('categories'));
     }
 
     public function store(Request $request)
     {
-        $data_product = [
-            'code' => $request['code'],
-            'name' => $request['name'],
-            'slug' => Str::slug($request['name']),
-            'price' => $request['price'],
-            'sale_price' => $request['sale_price'],
-            'description' => $request['description'],
-            'material' => $request['material'],
-            'category_id' => $request['category_id'],
-            'brand_id' => $request['brand_id'],
-        ];
+        $data = $request->validate([
+            'name'              => 'required|string|max:199',
+            'code'              => 'required|string|max:199',
+            'image'             => 'nullable|image|max:2048',
+            'status'            => 'required|boolean',
+            'price'             => 'required|numeric',
+            'sale_price'        => 'nullable|numeric|lt:price',
+            'length'            => 'nullable|string',
+            'width'             => 'nullable|string',
+            'wing_eyelids'      => 'nullable|string',
+            'paint_technology'  => 'nullable|string',
+            'key'               => 'nullable|string',
+            'hinge'             => 'nullable|string',
+            'design'            => 'nullable|string',
+            'description'       => 'nullable|string',
+            'category_id'       => 'required|exists:categories,id',
+        ]);
 
-        //Ảnh sản phẩm
-        $data_product['image'] = "";
-        //Nhập ảnrh
+        // slug tự sinh
+        $data['slug'] = Str::slug($data['name']);
+
+        // upload ảnh
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('images');
-            $data_product['image'] = $path;
+            $data['image'] = $request->file('image')->store('products', 'public');
         }
 
-        $product = Product::create($data_product);
+        Product::create($data);
 
-        //Xử lý biến thể
-        // dd($request->all());
-        // dd($request['color_id']);
-        for ($i = 0; $i < count($request['color_id']); $i++) {
-            $variant = [
-                'product_id' => $product->id,
-                'color_id' => $request['color_id'][$i],
-                'size_id' => $request['size_id'][$i],
-                'quantity' => $request['quantity'][$i],
-                'image' => $request['hinh'][$i]->store('images')
-            ];
-            // dd($variant);
-            ProductVariant::create($variant);
-        }
-
-        return redirect()->route('products.index')->with('message', 'Thêm dữ liệu thành công');
+        return redirect()->route('products.index')
+            ->with('success', 'Thêm sản phẩm thành công');
     }
 
-    //Hiển thị form sửa
     public function edit(Product $product)
     {
         $categories = Category::all();
-        $brands = Brand::all();
-        $colors = Color::all();
-        $sizes = Size::all();
-
-        return view(
-            'admin.products.edit',
-            compact('categories', 'brands', 'colors', 'sizes', 'product')
-        );
+        return view('admin.products.edit', compact('product', 'categories'));
     }
 
-    //Cập nhật
     public function update(Request $request, Product $product)
     {
-        $data_product = [
-            'code' => $request['code'],
-            'name' => $request['name'],
-            // 'slug' => Str::slug($request['name']),
-            'price' => $request['price'],
-            'sale_price' => $request['sale_price'],
-            'description' => $request['description'],
-            'material' => $request['material'],
-            'category_id' => $request['category_id'],
-            'brand_id' => $request['brand_id'],
-        ];
+        $data = $request->validate([
+            'name'              => 'required|string|max:199',
+            'code'              => 'required|string|max:199|unique:product,code,' . $product->id,
+            'image'             => 'nullable|image|max:2048',
+            'status'            => 'required|boolean',
+            'price'             => 'required|numeric',
+            'sale_price'        => 'nullable|numeric|lt:price',
+            'length'            => 'nullable|string',
+            'width'             => 'nullable|string',
+            'wing_eyelids'      => 'nullable|string',
+            'paint_technology'  => 'nullable|string',
+            'key'               => 'nullable|string',
+            'hinge'             => 'nullable|string',
+            'design'            => 'nullable|string',
+            'description'       => 'nullable|string',
+            'category_id'       => 'required|exists:categories,id',
+        ]);
 
-        //Ảnh sản phẩm cũ
-        $data_product['image'] = $product->image;
-        //Nhập ảnh mới nếu có
+        $data['slug'] = Str::slug($data['name']);
+
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('images');
-            $data_product['image'] = $path;
+            $data['image'] = $request->file('image')->store('products', 'public');
         }
 
-        // $product->update($data_product);
+        $product->update($data);
 
-        foreach ($request['color_id'] as $index => $color_id) {
-            $data_variant = [
-                'product_id' => $product->id,
-                'color_id' => $color_id,
-                'size_id' => $request['size_id'][$index],
-                'quantity' => $request['quantity'][$index]
-            ];
-
-            // dd($data_variant);
-            //Update
-            $find_variant = ProductVariant::query()
-                ->where('product_id', $product->id)
-                ->where('color_id', $color_id)
-                ->where('size_id', $request['size_id'][$index])
-                ->first();
-            if ($find_variant) {
-                $find_variant->update($data_variant); //Cập nhật 
-            } else {
-                ProductVariant::query()->create($data_variant);
-            }
-        } //end foreach
-
-        return redirect()->back()->with('message', 'Cập nhật dữ liệu thành công');
+        return redirect()->route('products.index')
+            ->with('success', 'Cập nhật sản phẩm thành công');
     }
-
-    //Xóa sản phẩm
+    public function show(Product $product)
+    {
+        return view('admin.products.show', compact('product'));
+    }
     public function destroy(Product $product)
     {
-        $product->update(['soft_delete' => 1]);
-        return redirect()->route('products.index')->with('message', 'Xóa dữ liệu thành công');
+        $product->delete();
+
+        return redirect()->route('admin.products.index')
+            ->with('success', 'Xóa sản phẩm thành công');
     }
+  
 }

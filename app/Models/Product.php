@@ -11,8 +11,13 @@ class Product extends Model
     protected $table = 'products';
 
     protected $fillable = [
+        'name',
+        'code',
+        'slug',
+        'image',
         'status',
         'price',
+        'sale_price',
         'length',
         'width',
         'wing_eyelids',
@@ -20,11 +25,9 @@ class Product extends Model
         'key',
         'hinge',
         'design',
-        'sale_price',
         'description',
         'category_id',
     ];
-
    
     const STATUS_ACTIVE = 1;
     const STATUS_INACTIVE = 0;

@@ -446,6 +446,7 @@
             <!-- /.sidebar -->
         </aside>
 
+<<<<<<< HEAD
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -455,6 +456,17 @@
                 </div>
             </div>
             <!-- /.content-header -->
+=======
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content p-4">
+                <div class="container-fluid">
+                    @yield('body')
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+>>>>>>> de9362f441209e912b2c55d9814527320e49c82a
 
             <!-- Main content -->
             <section class="content">
@@ -499,7 +511,11 @@
     {{-- <script src="{{ asset('/asset/admin/') }}/dist/js/demo.js"></script> --}}
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('/asset/admin/') }}/dist/js/pages/dashboard3.js"></script>
+<<<<<<< HEAD
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+=======
+
+>>>>>>> de9362f441209e912b2c55d9814527320e49c82a
     @yield('script')
 </body>
 
