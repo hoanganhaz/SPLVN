@@ -45,6 +45,7 @@ class PostController extends Controller
             'thumbnail.mimes' => 'Hình ảnh phải có định dạng: jpeg, png, jpg, gif',
             'thumbnail.max' => 'Kích thước hình ảnh không được vượt quá 2MB'
         ]);
+       
 
         // Xử lý upload ảnh
         if ($request->hasFile('thumbnail')) {

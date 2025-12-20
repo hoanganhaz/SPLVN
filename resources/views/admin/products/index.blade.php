@@ -6,7 +6,7 @@
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h3>Danh sách sản phẩm</h3>
-        <a href="{{ route('products.create') }}" class="btn btn-success">
+        <a href="{{ route('admin.products.create') }}" class="btn btn-success">
             + Thêm sản phẩm
         </a>
     </div>
@@ -61,16 +61,16 @@
                     </td>
 
                     <td>
-                        <a href="{{ route('products.show', $product->id) }}"
+                        <a href="{{ route('admin.products.show', $product->id) }}"
                            class="btn btn-sm btn-success">
                             Chi tiết
                         </a>
-                        <a href="{{ route('products.edit', $product->id) }}"
+                        <a href="{{ route('admin.products.edit', $product->id) }}"
                            class="btn btn-sm btn-warning">
                             Sửa
                         </a>
 
-                        <form action="{{ route('products.destroy', $product->id) }}"
+                        <form action="{{ route('admin.products.destroy', $product->id) }}"
                               method="POST"
                               class="d-inline"
                               onsubmit="return confirm('Bạn có chắc muốn xóa?')">

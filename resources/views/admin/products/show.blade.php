@@ -8,7 +8,7 @@
 <div class="container">
     <div class="d-flex justify-content-between mb-3">
         <h3>Chi tiết sản phẩm</h3>
-        <a href="{{ route('products.index') }}" class="btn btn-secondary">
+        <a href="{{ route('admin.products.index') }}" class="btn btn-secondary">
             Quay lại
         </a>
     </div>

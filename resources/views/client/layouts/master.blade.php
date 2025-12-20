@@ -20,7 +20,6 @@
 
 <body>
     @include('client.layouts.partials.header')
-
  @yield(  'content')
 
 

@@ -6,7 +6,7 @@
 <div class="container">
     <h3 class="mb-4">Cập nhật sản phẩm</h3>
 
-    <form action="{{ route('products.update', $product->id) }}"
+    <form action="{{ route('admin.products.update', $product->id) }}"
         method="POST"
         enctype="multipart/form-data">
   @csrf

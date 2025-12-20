@@ -6,7 +6,7 @@
     <div class="container">
         <h3 class="mb-4">Thêm sản phẩm</h3>
 
-        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             
             <div class="mb-3">
@@ -104,7 +104,7 @@
         ClassicEditor
             .create(document.querySelector('#description'), {
                 ckfinder: {
-                    uploadUrl: "{{ route('ckeditor.upload') }}?_token={{ csrf_token() }}"
+                    uploadUrl: "{{ route('admin.ckeditor.upload') }}?_token={{ csrf_token() }}"
                 }
             })
             .catch(error => {

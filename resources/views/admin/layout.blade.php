@@ -45,7 +45,12 @@
                     <a href="{{ route('admin.contracts.index') }}" class="nav-link">Liên hệ</a>
                 </li>
             </ul>
-
+<form action="{{ route('admin.auth.logout') }}" method="POST" class="d-inline">
+    @csrf
+    <button type="submit" class="btn btn-danger">
+        <i class="fas fa-sign-out-alt"></i> Đăng xuất
+    </button>
+</form>
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
@@ -111,7 +116,7 @@
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    
+
                     <div class="info">
                         <a href="#" class="d-block">Thao tác về trang quản trị </a>
                     </div>
@@ -446,17 +451,6 @@
             <!-- /.sidebar -->
         </aside>
 
-<<<<<<< HEAD
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <div class="content-header">
-                <div class="container-fluid">
-                    @yield('header')
-                </div>
-            </div>
-            <!-- /.content-header -->
-=======
         <div class="content-wrapper">
             <!-- Main content -->
             <section class="content p-4">
@@ -466,33 +460,24 @@
             </section>
             <!-- /.content -->
         </div>
->>>>>>> de9362f441209e912b2c55d9814527320e49c82a
+    </div>
+    <!-- /.content-wrapper -->
 
-            <!-- Main content -->
-            <section class="content">
-                <div class="container-fluid">
-                    @yield('body')
-                </div>
-            </section>
-            <!-- /.content -->
+    <!-- Control Sidebar -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2025 <a href="">Trang Quản Trị</a>.</strong>
+        Công Ty Cổ Phần SPLVN.
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 3.2.0
         </div>
-        <!-- /.content-wrapper -->
-
-        <!-- Control Sidebar -->
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
-
-        <!-- Main Footer -->
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2025 <a href="">Trang Quản Trị</a>.</strong>
-            Công Ty Cổ Phần SPLVN.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-            </div>
-        </footer>
+    </footer>
     </div>
     <!-- ./wrapper -->
 
@@ -511,11 +496,7 @@
     {{-- <script src="{{ asset('/asset/admin/') }}/dist/js/demo.js"></script> --}}
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('/asset/admin/') }}/dist/js/pages/dashboard3.js"></script>
-<<<<<<< HEAD
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-=======
-
->>>>>>> de9362f441209e912b2c55d9814527320e49c82a
     @yield('script')
 </body>
 
