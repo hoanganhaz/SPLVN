@@ -16,9 +16,10 @@ class ProductController extends Controller
         return view('admin.products.index', compact('products'));
     }
 
+
     public function create()
     {
-        $categories = Category::all();
+        $categories = Category::with('childrenRecursive')->get();
         return view('admin.products.create', compact('categories'));
     }
 
@@ -30,7 +31,7 @@ class ProductController extends Controller
             'image'             => 'nullable|image|max:2048',
             'status'            => 'required|boolean',
             'price'             => 'required|numeric',
-            'sale_price'        => 'nullable|numeric|lt:price',
+            'sale_price'        => 'nullable|numeric',
             'length'            => 'nullable|string',
             'width'             => 'nullable|string',
             'wing_eyelids'      => 'nullable|string',
@@ -64,13 +65,14 @@ class ProductController extends Controller
 
     public function update(Request $request, Product $product)
     {
+       
         $data = $request->validate([
             'name'              => 'required|string|max:199',
             'code'              => 'required|string|max:199|unique:product,code,' . $product->id,
             'image'             => 'nullable|image|max:2048',
             'status'            => 'required|boolean',
             'price'             => 'required|numeric',
-            'sale_price'        => 'nullable|numeric|lt:price',
+            'sale_price'        => 'nullable|numeric',
             'length'            => 'nullable|string',
             'width'             => 'nullable|string',
             'wing_eyelids'      => 'nullable|string',
@@ -104,5 +106,4 @@ class ProductController extends Controller
         return redirect()->route('admin.products.index')
             ->with('success', 'Xóa sản phẩm thành công');
     }
-  
 }

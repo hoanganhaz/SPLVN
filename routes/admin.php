@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\CKEditorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\admin\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,5 +72,8 @@ Route::prefix('admin')
                 Route::delete('/delete/{product}', [ProductController::class, 'destroy'])->name('destroy');
                 Route::post('/ckeditor/upload', [CKEditorController::class, 'upload']);
             });
+
+            //category routes
+            Route::resource('categories', CategoryController::class);
         });
     });
