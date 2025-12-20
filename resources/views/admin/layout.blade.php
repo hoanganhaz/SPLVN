@@ -427,13 +427,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/examples/invoice.html" class="nav-link">
+                                    <a href="{{ route('admin.posts.index') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Bài viết</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/examples/profile.html" class="nav-link">
+                                    <a href="{{ route('admin.posts.create') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Thêm bài viết</p>
                                     </a>

@@ -43,6 +43,8 @@ Route::prefix('admin')
 
             // Posts routes
             Route::prefix('posts')->name('posts.')->group(function () {
+                // Support legacy/incorrect URLs like /admin/posts/index
+                Route::get('/index', [PostController::class, 'index']);
                 Route::get('/', [PostController::class, 'index'])->name('index');
                 Route::get('/create', [PostController::class, 'create'])->name('create');
                 Route::post('/', [PostController::class, 'store'])->name('store');
@@ -63,6 +65,8 @@ Route::prefix('admin')
 
             // Products routes
             Route::prefix('products')->name('products.')->group(function () {
+                // Support legacy/incorrect URLs like /admin/products/index
+                Route::get('/index', [ProductController::class, 'index']);
                 Route::get('/', [ProductController::class, 'index'])->name('index');
                 Route::get('/create', [ProductController::class, 'create'])->name('create');
                 Route::post('/create', [ProductController::class, 'store'])->name('store');
