@@ -62,69 +62,87 @@
     </section><!-- /.categories -->
 
     <!-- .collection  -->
-    <section class="flat-spacing-2 pt-0">
-        <div class="container">
-            <div class="swiper tf-sw-mobile" data-screen="767" data-preview="1" data-space="15">
-                <div class="swiper-wrapper grid-cls-v2">
-                    <div class="swiper-slide item1">
-                        <div class="collection-position style-2">
-                            <a href="product-detail.html" class="img-style ">
-                                <img class="lazyload effect-paralax" data-src="assets/client/images/banner/banner-1.jpg"
-                                    src="assets/client/images/banner/banner-1.jpg" alt="banner-cls">
-                            </a>
-                            <div class="content cls-content">
-                                <div class="cls-heading">
-                                    <h3 class="text_white wow fadeInUp" data-wow-delay="0s">Super Sale Up To 50%</h3>
-                                    <p class="text_white wow fadeInUp" data-wow-delay="0.1s">Reserved for special occasions
-                                    </p>
-                                </div>
-                                <a href="product-detail.html" class="tf-btn btn-white  wow fadeInUp"
-                                    data-wow-delay="0.2s">Explore Collection <i class="icon-arrow-up-right"></i></a>
+  <!-- .collection  -->
+<section class="flat-spacing-2 pt-0">
+    <div class="container">
+        <div class="swiper tf-sw-mobile" data-screen="767" data-preview="1" data-space="15">
+            <div class="swiper-wrapper grid-cls-v2">
+                <div class="swiper-slide item1">
+                    <div class="collection-position style-2">
+                        <a href="product-detail.html" class="img-style">
+                            <img class="lazyload effect-paralax" 
+                                 data-src="{{ asset('assets/client/images/shop/3.jpg') }}"
+                                 src="{{ asset('assets/client/images/shop/3.jpg') }}" 
+                                 alt="banner-cls" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+                        <div class="content cls-content">
+                            <div class="cls-heading">
+                                <h3 class="text_white wow fadeInUp" data-wow-delay="0s">
+                                    Những sản phẩm<br>đang khuyến mãi
+                                </h3>
+                                <p class="text_white wow fadeInUp" data-wow-delay="0.1s">
+                                    Mua nhanh để được giá tốt
+                                </p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide item2">
-                        <div class="collection-position style-2 spacing-1 ">
-                            <a href="product-detail.html" class="img-style ">
-                                <img class="lazyload effect-paralax" data-src="assets/client/images/banner/banner-7.jpg"
-                                    src="assets/client/images/banner/banner-7.jpg" alt="banner-cls">
+                            <a href="product-detail.html" class="tf-btn btn-white wow fadeInUp" data-wow-delay="0.2s">
+                                Xem sản phẩm<i class="icon-arrow-up-right"></i>
                             </a>
-                            <div class="content cls-content">
-                                <div class="cls-heading">
-                                    <h4 class="text_white wow fadeInUp" data-wow-delay="0s">Upgrade Your Workspace</h4>
-                                    <p class="text_white wow fadeInUp" data-wow-delay="0.1s">Modern office lighting</p>
-                                </div>
-                                <a href="product-detail.html" class="btn-line btn-line-white wow fadeInUp"
-                                    data-wow-delay="0.2s"><span>
-                                        Shop Lighting
-                                    </span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide item3">
-                        <div class="collection-position style-2 spacing-1 ">
-                            <a href="product-detail.html" class="img-style ">
-                                <img class="lazyload effect-paralax" data-src="assets/client/images/banner/banner-8.jpg"
-                                    src="assets/client/images/banner/banner-8.jpg" alt="banner-cls">
-                            </a>
-                            <div class="content cls-content">
-                                <div class="cls-heading">
-                                    <h4 class="text_white wow fadeInUp" data-wow-delay="0s">Elevate Your Office</h4>
-                                    <p class="text_white wow fadeInUp" data-wow-delay="0.1s">Stylish office decor</p>
-                                </div>
-                                <a href="product-detail.html" class="btn-line btn-line-white wow fadeInUp"
-                                    data-wow-delay="0.2s">
-                                    <span>
-                                        Discover Decor
-                                    </span></a>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="sw-pagination-mb sw-dots type-circle justify-content-center d-md-none d-flex"></div>
+                <div class="swiper-slide item2">
+                    <div class="collection-position style-2 spacing-1">
+                        <a href="product-detail.html" class="img-style">
+                            <img class="lazyload effect-paralax" 
+                                 data-src="{{ asset('assets/client/images/shop/5.jpg') }}"
+                                 src="{{ asset('assets/client/images/shop/5.jpg') }}" 
+                                 alt="banner-cls" style="width: 150%; height: 150%; object-fit: cover;"> 
+                        </a>
+                        <div class="content cls-content">
+                            <div class="cls-heading">
+                                <h4 class="text_white wow fadeInUp" data-wow-delay="0s">
+                                    Các Sản Phẩm<br>phù hợp với bạn
+                                </h4>
+                                <p class="text_white wow fadeInUp" data-wow-delay="0.1s">
+                                    Mua nhanh để được giá tốt
+                                </p>
+                            </div>
+                            <a href="product-detail.html" class="btn-line btn-line-white wow fadeInUp" data-wow-delay="0.2s">
+                                <span>Xem sản phẩm</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide item3">
+                    <div class="collection-position style-2 spacing-1">
+                        <a href="product-detail.html" class="img-style">
+                            <img class="lazyload effect-paralax" 
+                                 data-src="{{ asset('assets/client/images/banner/3.png') }}"
+                                 src="{{ asset('assets/client/images/banner/3.png') }}" 
+                                 alt="banner-cls" style="width: 190%; height: 190%; object-fit: cover;">
+                        </a>
+                        <div class="content cls-content">
+                            <div class="cls-heading">
+                                <h4 class="text_white wow fadeInUp" data-wow-delay="0s">
+                                    Nâng tầm<br>không gian của bạn
+                                </h4>
+                                <p class="text_white wow fadeInUp" data-wow-delay="0.1s">
+                                    Trang trí đẳng cấp
+                                </p>
+                            </div>
+                            <a href="" class="btn-line btn-line-white wow fadeInUp" data-wow-delay="0.2s">
+                                <span>Khám phá ngay</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="sw-pagination-mb sw-dots type-circle justify-content-center d-md-none d-flex"></div>
         </div>
-    </section> <!-- /.collection  -->
+    </div>
+    <br>
+    <br>
+    <br>
 
     <!-- .top-pick -->
     <section class="flat-spacing-5  pt-0">
@@ -603,8 +621,8 @@
             <div class="row flat-with-text-lookbook wrap-lookbook-hover align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <div class="banner-img">
-                        <img class="lazyload" data-src="assets/client/images/section/section-discover-1.jpg"
-                            src="assets/client/images/section/section-discover-1.jpg" alt="banner">
+                        <img class="lazyload" data-src="{{ asset('assets/client/images/banner/2.jpg') }}"
+                            src="{{ asset('assets/client/images/banner/2.jpg') }}" alt="banner">
                         <div class="tf-pin-btn pin-1 bundle-pin-item swiper-button" data-slide="0" id="pin1">
                             <span>1</span>
 
@@ -681,7 +699,7 @@
                                     1
                                 </h6>
                                 <div class="image-cart">
-                                    <img src="assets/client/images/shop/cart-item-1.jpg" alt="">
+                                    <img src="" alt="">
                                 </div>
                                 <div class="info">
                                     <h6 class="name">

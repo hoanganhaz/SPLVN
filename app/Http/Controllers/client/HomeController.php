@@ -15,5 +15,21 @@ public function about()
     {
         return view('client.about');
     }
+    public function product()
+    {
+        return view('client.product.product');
+    }
+    public function productDetail()
+    {
+        return view('client.product.product_detail');
+    }
+    public function post()
+    {
+        return view('client.post.post');
+    }
+    public function postDetail()
+    {
+        return view('client.post.postDetail');
+    }
    
 }

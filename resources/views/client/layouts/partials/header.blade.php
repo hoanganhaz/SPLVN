@@ -95,9 +95,9 @@
                                 <ul class="box-nav-ul justify-content-start">
                                   
                                     <a href="/" class="item-link">Trang Chủ</a>
-                                    <a href="{{ route('client.about') }}" class="item-link">Sản Phẩm </a>
+                                    <a href="{{ route('client.product') }}" class="item-link">Sản Phẩm </a>
                                         <a href="{{ route('client.about') }}" class="item-link">Giới Thiệu </a>
-                                          <a href="{{ route('client.about') }}" class="item-link">Bài Viết </a>
+                                          <a href="{{ route('client.post') }}" class="item-link">Bài Viết </a>
                                         
                                  
                                     <li class="menu-item position-relative">

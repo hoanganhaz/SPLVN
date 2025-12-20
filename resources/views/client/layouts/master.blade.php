@@ -7,10 +7,11 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
-    <title>GearO - Office equipment eCommerce HTML Template</title>
+    <title>SPLVN UP TÍN-ĐẲNG CẤP</title>
 
     <meta name="author" content="themesflat.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
 
     <!-- font -->
      @include('client.layouts.partials.style')
