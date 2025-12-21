@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\Contract;
@@ -34,6 +35,10 @@ class AppServiceProvider extends ServiceProvider
                 $newContacts = 0;
             }
             $view->with('newContactsCount', $newContacts);
+        });
+        view()->composer('*', function ($view) {
+            $categories = Category::all();
+            $view->with(compact('categories'));
         });
     }
 }
