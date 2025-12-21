@@ -1,7 +1,7 @@
 @extends('client.layouts.master')
 @section('content')
          <div class="page-title relative">
-            <div class="paralaximg" data-parallax="scroll" data-image-src="{{ asset('images/page-title/page-title-1.jpg') }}">
+            <div class="paralaximg" data-parallax="scroll" data-image-src="{{ asset('assets/client/images/page-title/page-title-1.jpg') }}">
             </div>
             <div class="content">
                 <div class="container">
@@ -9,7 +9,7 @@
                         <div class="col-12">
                             <h3 class="title">Bài Viết</h3>
                             <ul class="breadcrumb">
-                                <li><a href="{{ route(' client.home') }}">Bài viết</a></li>
+                                <li><a href="">Bài viết</a></li>
                                 <li>Bài viết</li>
                             </ul>
                         </div>

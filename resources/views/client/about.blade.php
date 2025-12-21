@@ -4,6 +4,16 @@
         .text-right {
             text-align: right;
         }
+        /* Center the image wrapper horizontally */
+        .img-wrap {
+            display: flex;
+            justify-content: center;
+        }
+        .img-wrap img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
     </style>
     <!-- .about-us-main -->
     <section class="flat-spacing-2 about-us-main pb-0">
