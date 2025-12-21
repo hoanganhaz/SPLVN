@@ -23,13 +23,21 @@ class HomeController extends Controller
     {
         return view('client.about');
     }
-    public function product()
+    public function product($CategoryID=null)
     {
-        return view('client.product.product');
+        if ($CategoryID) {
+            $products = Product::where('category_id', $CategoryID)
+                ->latest()
+                ->paginate(12);
+        } else {
+            $products = Product::latest()->paginate(12);
+        }    
+        return view('client.product.product', compact('products'));
     }
-    public function productDetail()
+    public function productDetail($id)
     {
-        return view('client.product.product_detail');
+        $product = Product::with('category')->findOrFail($id);
+        return view('client.product.product_detail',compact('product'));
     }
     public function post()
     {
@@ -39,4 +47,5 @@ class HomeController extends Controller
     {
         return view('client.post.postDetail');
     }
+  
 }
