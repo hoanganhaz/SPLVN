@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\client\PostController;
 use App\Http\Controllers\ContactController;
 
 /*
@@ -25,8 +26,7 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::get("/product", [HomeController::class, 'product'])->name('client.product');
 Route::get("/product_detail", [HomeController::class, 'productDetail'])->name('client.productDetail');
 
-Route::get("/post", [HomeController::class, 'post'])->name('client.post');
-Route::get("/post_detail", [HomeController::class, 'postDetail'])->name('client.postDetail');
+Route::get("/post", [PostController::class, 'index'])->name('client.index');
+Route::get("/post_detail/{slug?}", [PostController::class, 'show'])->name('client.show');
 // Load additional route files
 require __DIR__ . '/admin.php';
-

@@ -16,7 +16,8 @@ class CategoryController extends Controller
 
     public function create()
     {
-        $categories = Category::with('children')->get();
+        // Lấy danh sách category làm parent option cho form
+        $parents = Category::with('children')->get();
         return view('admin.categories.create', compact('parents'));
     }
 

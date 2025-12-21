@@ -4,14 +4,22 @@ namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('client.home');
+        // Load data for homepage
+        $categories = Category::all();
+        $products = Product::orderBy('created_at', 'desc')->take(8)->get();
+        $posts = Post::orderBy('created_at', 'desc')->take(4)->get();
+
+        return view('client.home', compact('categories', 'products', 'posts'));
     }
-public function about()
+    public function about()
     {
         return view('client.about');
     }
@@ -31,5 +39,4 @@ public function about()
     {
         return view('client.post.postDetail');
     }
-   
 }

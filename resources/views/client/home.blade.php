@@ -107,7 +107,9 @@
                 <div class="sw-button swiper-button-next line-default slider-home2-next"></div>
             </div>
             <div class="sw-dots slider-home2-pagination type-circle no-border justify-content-center"></div>
-        </div><!-- /.silideshow  -->
+        </div>
+        <br>
+        <br><!-- /.silideshow  -->
                     <div class="heading-section text-center">
                         <h3 class="wow fadeInUp">Danh mục sản phảm</h3>
                         <p class="text-body-default text_secondary wow fadeInUp" data-wow-delay="0.1s">Những mẫu mới hot được
@@ -164,6 +166,7 @@
             </div>
         </div>
     </section><!-- /.categories -->
+   
 
     <!-- .collection  -->
   <!-- .collection  -->

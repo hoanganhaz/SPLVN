@@ -45,12 +45,12 @@
                     <a href="{{ route('admin.contracts.index') }}" class="nav-link">Liên hệ</a>
                 </li>
             </ul>
-<form action="{{ route('admin.auth.logout') }}" method="POST" class="d-inline">
-    @csrf
-    <button type="submit" class="btn btn-danger">
-        <i class="fas fa-sign-out-alt"></i> Đăng xuất
-    </button>
-</form>
+            <form action="{{ route('admin.auth.logout') }}" method="POST" class="d-inline">
+                @csrf
+                <button type="submit" class="btn btn-danger">
+                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                </button>
+            </form>
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
@@ -497,6 +497,7 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('/asset/admin/') }}/dist/js/pages/dashboard3.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    @yield('scripts')
     @yield('script')
 </body>
 

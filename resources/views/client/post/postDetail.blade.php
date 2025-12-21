@@ -1,404 +1,896 @@
 @extends('client.layouts.master')
+
+@push('styles')
+    <style>
+        .blog-detail-wrap {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .blog-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .blog-content-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .blog-category-badge {
+            display: inline-block;
+            background: #f8f9fa;
+            color: #495057;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .blog-category-badge:hover {
+            background: #007bff;
+            color: #fff;
+        }
+
+        .blog-title {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            align-items: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .blog-meta-item i {
+            font-size: 16px;
+        }
+
+        .blog-featured-image {
+            margin: 40px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-featured-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Ensure large images don't overflow on small screens */
+        .blog-featured-image img {
+            object-fit: cover;
+            max-height: 600px;
+            width: 100%;
+        }
+
+        .blog-description {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #495057;
+            margin-bottom: 30px;
+            padding: 20px 25px;
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            border-radius: 4px;
+        }
+
+        .blog-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .blog-content p {
+            margin-bottom: 18px;
+        }
+
+        .blog-content h2,
+        .blog-content h3,
+        .blog-content h4 {
+            margin-top: 30px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .blog-content h2 {
+            font-size: 28px;
+        }
+
+        .blog-content h3 {
+            font-size: 24px;
+        }
+
+        .blog-content h4 {
+            font-size: 20px;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .blog-content ul,
+        .blog-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .blog-content li {
+            margin-bottom: 10px;
+        }
+
+        .blog-tags-share {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px 0;
+            margin: 40px 0;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .blog-tag {
+            background: #f8f9fa;
+            color: #495057;
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .blog-tag:hover {
+            background: #007bff;
+            color: #fff;
+        }
+
+        .blog-share {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .blog-share-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .social-share-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-facebook {
+            background: #3b5998;
+        }
+
+        .social-twitter {
+            background: #1da1f2;
+        }
+
+        .social-linkedin {
+            background: #0077b5;
+        }
+
+        .social-telegram {
+            background: #0088cc;
+        }
+
+        .blog-navigation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .related-post {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin: 30px 0 60px;
+        }
+
+        .related-post .pre,
+        .related-post .next {
+            flex: 1 1 50%;
+        }
+
+        .nav-post-item {
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-post-item:hover {
+            background: #007bff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+        }
+
+        .nav-post-item:hover * {
+            color: #fff !important;
+        }
+
+        .nav-direction {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6c757d;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .nav-post-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+
+        .nav-post-item.next {
+            text-align: right;
+        }
+
+        .comments-section {
+            margin: 60px 0;
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .comments-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .comment-form {
+            background: #fff;
+            padding: 35px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .form-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: #adb5bd;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #007bff;
+            color: #fff;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .submit-btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .related-articles {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 26px;
+            }
+
+            .blog-content-wrapper {
+
+                /* TOC styles */
+                .blog-toc {
+                    margin: 18px 0 0;
+                }
+
+                .toc-toggle {
+                    display: none;
+                    background: transparent;
+                    border: none;
+                    color: #007bff;
+                    font-weight: 600;
+                    cursor: pointer;
+                    margin-bottom: 8px;
+                }
+
+                .toc-content {
+                    background: #f8f9fa;
+                    border: 1px solid #e9ecef;
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                }
+
+                .toc-content strong {
+                    display: block;
+                    margin-bottom: 8px;
+                }
+
+                .toc-list {
+                    list-style: none;
+                    padding-left: 0;
+                    margin: 0;
+                }
+
+                .toc-list li {
+                    margin: 6px 0;
+                }
+
+                .toc-list li a {
+                    color: #495057;
+                    text-decoration: none;
+                    font-size: 14px;
+                }
+
+                .toc-list li.toc-h3 {
+                    margin-left: 14px;
+                    font-size: 13px;
+                }
+
+                .toc-list li.toc-h4 {
+                    margin-left: 28px;
+                    font-size: 13px;
+                }
+
+                @media (max-width: 768px) {
+                    .toc-toggle {
+                        display: inline-block;
+                    }
+
+                    .toc-content {
+                        display: none;
+                    }
+
+                    .toc-content.open {
+                        display: block;
+                    }
+                }
+
+                padding: 30px 20px;
+            }
+
+            .blog-navigation {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-tags-share {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Additional mobile refinements */
+        @media (max-width: 480px) {
+            .blog-detail-wrap {
+                padding: 30px 0;
+            }
+
+            .blog-content-wrapper {
+                padding: 20px;
+                border-radius: 8px;
+            }
+
+            .blog-title {
+                font-size: 22px;
+                line-height: 1.25;
+            }
+
+            .blog-meta-info {
+                gap: 12px;
+                font-size: 13px;
+            }
+
+            .blog-description {
+                font-size: 15px;
+                padding: 12px;
+            }
+
+            .social-share-btn {
+                width: 36px;
+                height: 36px;
+            }
+
+            .blog-tags {
+                gap: 8px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .related-post {
+                flex-direction: column;
+            }
+
+            .related-post .pre,
+            .related-post .next {
+                text-align: left;
+            }
+
+            .blog-featured-image img {
+                max-height: 360px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .blog-title {
+                font-size: 20px;
+            }
+
+            .blog-content {
+                font-size: 15px;
+            }
+
+            .blog-description {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .submit-btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+@endpush
+
 @section('content')
     <!-- main-content -->
-        <div class="main-content">
+    <div class="main-content">
 
-            <!-- .blog-details-main -->
-            <div class="blog-detail-wrap">
-                <div class="inner">
-                    <div class="heading">
-                        <ul class="list-tags has-bg ">
-                            <li>
-                                <a href="#" class="link">Office</a>
-                            </li>
-                        </ul>
-                        <h3>How To Personalize Your Office With Decor For Increased Motivation</h3>
-                        <div class="wrap-meta">
-                            <ul class="meta">
-                                <li class="text-body-1"><i class="icon-calendar"></i><a class="link" href="#">January 2, 2025</a></li>
-                                <li class="text-body-1"><i class="icon-user"></i> <span>by<a href="#"
-                                            class="link">Themesflat</a></span> </li>
-                            </ul>
-                            <ul class="meta info">
-                                <li class="text-body-1"><i class="icon-chat"></i>12</li>
-                                <li class="text-body-1"><i class="icon-eye"></i>260.2K</li>
-                                <li class="text-body-1"><i class="icon-clock"></i>5 Min Read</li>
-                            </ul>
+        <!-- .blog-details-main -->
+        <div class="blog-detail-wrap">
+            <div class="blog-detail-container">
+                <div class="blog-content-wrapper">
+
+                    <!-- Blog Header -->
+                    <div class="blog-header">
+                        @if ($post->category)
+                            <a href="#" class="blog-category-badge">{{ $post->category }}</a>
+                        @endif
+
+                        <h1 class="blog-title">{{ $post->title }}</h1>
+
+                        <div class="blog-meta-info">
+                            <div class="blog-meta-item">
+                                <i class="icon-calendar"></i>
+                                <span>{{ $post->created_at->format('F d, Y') }}</span>
+                            </div>
+                            <div class="blog-meta-item">
+                                <i class="icon-user"></i>
+                                <span>{{ $post->author ?? 'Admin' }}</span>
+                            </div>
+                            <div class="blog-meta-item">
+                                <i class="icon-eye"></i>
+                                <span>{{ $post->views ?? 0 }} views</span>
+                            </div>
+                            <div class="blog-meta-item">
+                                <i class="icon-clock"></i>
+                                <span>{{ $post->reading_time ?? '5' }} min read</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="content">
-                        <p class="text-secondary text-body-1 mb_12">Praesent interdum lacus ac est viverra hendrerit. Aliquam dapibus,
-                            ante vitae mattis gravida, purus sapien interdum magna, convallis volutpat est turpis
-                            pulvinar dui. Aenean eu turpis est. In hac habitasse platea dictumst.</p>
-                        <p class="text-secondary text-body-1">Praesent interdum lacus ac est viverra hendrerit. Aliquam dapibus, ante
-                            vitae matti gravida, purus sapien interdum magna, convallis volutpat est turpis pulvinar
-                            dui. Aenean eu turpis est. In hac habitasse platea dictumst. Integer at lobortis metus.
-                            Proin molestie eget massa vel gravida. Suspendisse nec ante vel augue consectetur mollis.
-                            Praesent interdu lacus ac est viverra hendrerit. Aenean eu turpis est. </p>
+                    <!-- Table of Contents -->
+                    <div class="blog-toc" aria-hidden="false">
+                        <button class="toc-toggle" aria-expanded="true">Mục lục ▾</button>
+                        <nav class="toc-content" aria-label="Mục lục bài viết">
+                            <strong>Mục lục</strong>
+                            <ul class="toc-list"></ul>
+                        </nav>
                     </div>
-                    <div class="image-wrap">
-                        <img class="lazyload" data-src="images/blog/blog-details.jpg" alt="img"
-                            src="images/blog/blog-details.jpg">
+
+                    <!-- Featured Image -->
+                    @if ($post->thumbnail)
+                        <div class="blog-featured-image">
+                            <img src="{{ asset('storage/' . $post->thumbnail) }}" alt="{{ $post->title }}">
+                        </div>
+                    @endif
+
+                    <!-- Description -->
+                    @if ($post->description)
+                        <div class="blog-description">
+                            {{ $post->description }}
+                        </div>
+                    @endif
+
+                    <!-- Content -->
+                    <div class="blog-content">
+                        {!! $post->content !!}
                     </div>
-                    <div class="content">
-                        <h4 class="mb_16">Storage Solutions for an Organized Office</h4>
-                        <p class="text-secondary text-body-1 mb_24">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                            interdum sed mauris eu imperdiet. Donec congue orci nec mi luctus, ut faucibus mauris
-                            scelerisque. Donec orci lorem, volutpat a mauris nec, sodales imperdiet urna. Sed dictum
-                            enim libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas ligula
-                            libero, pharetra non dolor et, tempor bibendum magna. Mauris a efficitur nisi.
-                        </p>
-                        <div class="quote mb_24">
-                            <div class="wrap-content">
-                                <div class="icon">
-                                    <i class="icon-quote"></i>
+
+                    <!-- Tags & Share -->
+                    <div class="blog-tags-share">
+                        @if ($post->tags)
+                            <div class="blog-tags">
+                                <span style="font-weight: 600; color: #1a1a1a;">Tags:</span>
+                                @foreach (explode(',', $post->tags) as $tag)
+                                    <a href="#" class="blog-tag">{{ trim($tag) }}</a>
+                                @endforeach
+                            </div>
+                        @endif
+
+                        <div class="blog-share">
+                            <h6 class="blog-share-title">Share:</h6>
+                            <div class="social-share-links">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}"
+                                    target="_blank" class="social-share-btn social-facebook">
+                                    <i class="icon icon-facebook"></i>
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode($post->title) }}"
+                                    target="_blank" class="social-share-btn social-twitter">
+                                    <i class="icon icon-x"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ urlencode(url()->current()) }}"
+                                    target="_blank" class="social-share-btn social-linkedin">
+                                    <i class="icon icon-linkedin"></i>
+                                </a>
+                                <a href="https://t.me/share/url?url={{ urlencode(url()->current()) }}&text={{ urlencode($post->title) }}"
+                                    target="_blank" class="social-share-btn social-telegram">
+                                    <i class="icon icon-telegram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Navigation to Previous/Next Post --}}
+                    @php
+                        $previousPost = \App\Models\Post::where('id', '<', $post->id)->orderBy('id', 'desc')->first();
+                        $nextPost = \App\Models\Post::where('id', '>', $post->id)->orderBy('id', 'asc')->first();
+                    @endphp
+
+                    @if ($previousPost || $nextPost)
+                        <div class="related-post">
+                            @if ($previousPost)
+                                <div class="pre w-50">
+                                    <div class="text-btn-uppercase btn-direction">
+                                        <a href="{{ route('client.show', $previousPost->slug) }}">Previous</a>
+                                    </div>
+                                    <h6 class="fw-5">
+                                        <a class="link line-clamp-2"
+                                            href="{{ route('client.show', $previousPost->slug) }}">
+                                            {{ $previousPost->title }}
+                                        </a>
+                                    </h6>
                                 </div>
-                                <div class="content">
-                                    <h4 class="mb_20">“If you set your goals ridiculously high and it's a failure, you
-                                        will fail above
-                                        everyone else's success”</h4>
-                                    <h6 class="author"> Nelson Mandela</h6>
+                            @endif
+
+                            @if ($nextPost)
+                                <div class="next w-50">
+                                    <div class="text-btn-uppercase btn-direction text-end">
+                                        <a href="{{ route('client.show', $nextPost->slug) }}">Next</a>
+                                    </div>
+                                    <h6 class="fw-5 text-end">
+                                        <a class="link line-clamp-2" href="{{ route('client.show', $nextPost->slug) }}">
+                                            {{ $nextPost->title }}
+                                        </a>
+                                    </h6>
                                 </div>
-                            </div>
+                            @endif
                         </div>
-                        <p class="text-secondary text-body-1">Praesent interdum lacus ac est viverra hendrerit. Aliquam dapibus, ante
-                            vitae mattis gravida, purus sapien interdum magna, convallis volutpat est turpis pulvinar
-                            dui. Aenean eu turpis est. In hac habitasse platea dictumst. Integer at lobortis metus.
-                            Proin molestie eget massa vel gravida. Suspendisse nec ante vel augue consectetur mollis.
-                        </p>
-                    </div>
-                    <div class="bot d-flex justify-content-between gap-10 flex-wrap">
-                        <ul class="list-tags has-bg">
-                            <li class="text-body-default">Tag:</li>
-                            <li>
-                                <a href="#" class="link text-caption-2">Office</a>
-                            </li>
-                            <li>
-                                <a href="#" class="link text-caption-2">Furniture</a>
-                            </li>
-                        </ul>
-                        <div class="d-flex align-items-center justify-content-between gap-16">
-                            <p class="text-body-default">Share this post:</p>
-                            <ul class="tf-social-icon style-1">
-                                <li><a href="#" class="social-facebook"><i class="icon icon-facebook"></i></a></li>
-                                <li><a href="#" class="social-twiter"><i class="icon icon-x"></i></a></li>
-                                <li><a href="#" class="social-pinterest"><i class="icon icon-instagram"></i></a></li>
-                                
-                                <li><a href="#" class="social-instagram"><i class="icon icon-telegram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="related-post">
-                        <div class="pre w-50">
-                            <div class="text-btn-uppercase btn-direction">
-                                <a href="#">Previous</a>
-                            </div>
-                            <h6 class="fw-5">
-                                <a class="link line-clamp-2" href="#">Creating Collaborative Spaces with Flexible Office
-                                    Furniture</a>
-                            </h6>
-                        </div>
-                        <div class="next w-50">
-                            <div class="text-btn-uppercase btn-direction text-end">
-                                <a href="#">Next</a>
-                            </div>
-                            <h6 class="fw-5 text-end">
-                                <a class="link line-clamp-2" href="#">Budget-Friendly Office Furniture Ideas for
-                                    Startups</a>
-                            </h6>
-                        </div>
-                    </div>
+                    @endif
+
+                    {{-- Comments Section (Optional - if you want to implement later) --}}
                     <div class="reply-comment">
-                        <h4 class="reply-comment-heading">03 Comments</h4>
-                        <div class="reply-comment-wrap">
-                            <div class="reply-comment-item">
-                                <div class="image">
-                                    <img src="images/avatar/avatar-1.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <div>
-                                        <h6>
-                                            <a href="#" class="link">Guy Hawkins</a>
-                                        </h6>
-                                        <div class="day text-caption-1">August 13, 2025</div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur. Cursus nunc pharetra arcu quam turpis
-                                        risus amet turpis. Facilisis elementum tincidunt pellentesque sed rutrum enim.
-                                    </p>
-                                    <div>
-                                        <a class="text-button link" href="#">Reply</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="reply-comment-item type-reply">
-                                <div class="image">
-                                    <img src="images/avatar/avatar-2.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <div>
-                                        <div class="d-flex gap-12 align-items-center">
-                                            <h6>
-                                                <a href="#" class="link">Eleanor Pena</a>
-                                            </h6>
-                                            <div class="box-check">
-                                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M3.39644 7.84288L0.146441 4.35628C-0.0488135 4.14681 -0.0488135 3.80718 0.146441 3.59769L0.853531 2.8391C1.04879 2.62961 1.36539 2.62961 1.56064 2.8391L3.75 5.18782L8.43936 0.157101C8.63461 -0.0523671 8.95121 -0.0523671 9.14647 0.157101L9.85356 0.915689C10.0488 1.12516 10.0488 1.46479 9.85356 1.67428L4.10355 7.8429C3.90828 8.05237 3.5917 8.05237 3.39644 7.84288Z"
-                                                        fill="white"></path>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="day text-caption-1">August 13, 2025</div>
-                                    </div>
-                                    <p>Great choice of Acronym AF1’s</p>
-                                </div>
-                            </div>
+                        <h4 class="reply-comment-heading">Bình Luận</h4>
+                        <div class="alert alert-info">
+                            <p class="mb-0">Tính năng bình luận sẽ được cập nhật sớm!</p>
                         </div>
                     </div>
+
+                    {{-- Leave Comment Form --}}
                     <div class="leave-comment">
-                        <h4 class="leave-comment-heading mb_24">Leave A Comment</h4>
-                        <form class="form-leave-comment">
+                <h4 class="leave-comment-heading mb_24">Nhập Bình Luận</h4>
+                        <form class="form-leave-comment" action="#" method="POST">
+                            @csrf
                             <div class="wrap">
                                 <div class="cols">
                                     <fieldset class="">
-                                        <input class="" type="text" placeholder="Your Name*" name="text" tabindex="2"
-                                            value="" aria-required="true" required="">
+                                        <input class="" type="text" placeholder="Họ Tên*" name="name"
+                                            tabindex="1" value="" aria-required="true" required="">
                                     </fieldset>
                                     <fieldset class="">
-                                        <input class="" type="email" placeholder="Your Email*" name="email" tabindex="2"
-                                            value="" aria-required="true" required="">
+                                        <input class="" type="email" placeholder="Email*" name="email"
+                                            tabindex="2" value="" aria-required="true" required="">
                                     </fieldset>
                                 </div>
                                 <fieldset class="">
-                                    <textarea class="" rows="4" placeholder="Your Message*" tabindex="2"
-                                        aria-required="true" required=""></textarea>
+                                    <textarea class="" rows="4" placeholder="Nội dung*" name="message" tabindex="3" aria-required="true"
+                                        required=""></textarea>
                                 </fieldset>
                             </div>
                             <div class="button-submit">
-                                <button class="tf-btn btn-onsurface" type="submit">Submit Review <i
+                                <button class="tf-btn btn-onsurface" type="submit">Bình luận <i
                                         class="icon-arrow-up-right"></i></button>
                             </div>
                         </form>
                     </div>
+
                     <ul class="tf-social-icon style-1 ">
-                        <li><h6>Share:</h6></li>
-                        <li><a href="#" class="social-facebook"><i class="icon icon-facebook"></i></a></li>
-                        <li><a href="#" class="social-twiter"><i class="icon icon-x"></i></a></li>
-                        <li><a href="#" class="social-pinterest"><i class="icon icon-instagram"></i></a></li>
-                        <li><a href="#" class="social-instagram"><i class="icon icon-telegram"></i></a></li>
+                        <li>
+                            <h6>Share:</h6>
+                        </li>
+                        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}"
+                                target="_blank" class="social-facebook"><i class="icon icon-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode($post->title) }}"
+                                target="_blank" class="social-twiter"><i class="icon icon-x"></i></a></li>
+                        <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ urlencode(url()->current()) }}"
+                                target="_blank" class="social-pinterest"><i class="icon icon-linkedin"></i></a></li>
+                        <li><a href="https://t.me/share/url?url={{ urlencode(url()->current()) }}&text={{ urlencode($post->title) }}"
+                                target="_blank" class="social-instagram"><i class="icon icon-telegram"></i></a></li>
                     </ul>
                 </div>
-
             </div><!-- /.blog-details-main -->
 
-            <!-- Related -->
-            <section class="flat-spacing-8">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="heading-section text-center">
-                                <h3 class="wow fadeInUp">Related Articles</h3>
-                                <p class="text-body-1 wow fadeInUp" data-wow-delay="0.1s">Discover the Hottest Fashion News and Trends Straight from the
-                                    Runway</p>
-                            </div>
-                            <div class="swiper tf-sw-recent " data-preview="3" data-tablet="2" data-mobile="1"
-                                data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1"
-                                data-pagination-md="1" data-pagination-lg="1">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide ">
-                                        <div class="blog-article-item wow fadeInUp" data-wow-delay="0s">
-                                            <div class="article-thumb">
-                                                <a href="blog-details.html">
-                                                    <img class="lazyload" data-src="images/blog/blog-1.jpg"
-                                                        src="images/blog/blog-1.jpg" alt="img-blog">
-                                                </a>
-                                                <div class="article-label">
-                                                    <a href="#" class="text-button-small">Guides</a>
-                                                </div>
-                                            </div>
-                                            <div class="article-content">
-                                                <ul class="meta">
-                                                    <li class="text-button-small"><a href="#" class="link">January 2, 2025</a></li>
-                                                    <li class="text-button-small">by<a href="#"
-                                                            class="link">Themesflat</a></li>
-                                                </ul>
-                                                <h5 class="article-title">
-                                                    <a href="blog-details.html" class="line-clamp-2 link">Maximizing
-                                                        Comfort with
-                                                        Ergonomic Office
-                                                        Furniture</a>
-                                                </h5>
-                                                <p class="article-description text_secondary text-body-default">
-                                                    Discover how ergonomic chairs and desks can enhance your comfort and
-                                                    productivity at
-                                                    work.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="blog-article-item wow fadeInUp" data-wow-delay="0.1s">
-                                            <div class="article-thumb">
-                                                <a href="blog-details.html">
-                                                    <img class="lazyload" data-src="images/blog/blog-2.jpg"
-                                                        src="images/blog/blog-2.jpg" alt="img-blog">
-                                                </a>
-                                                <div class="article-label">
-                                                    <a href="#" class="text-button-small">Workspace </a>
-                                                </div>
-                                            </div>
-                                            <div class="article-content">
-                                                <ul class="meta">
-                                                    <li class="text-button-small"><a href="#" class="link">January 3, 2025</a></li>
-                                                    <li class="text-button-small">by<a href="#"
-                                                            class="link">Themesflat</a></li>
-                                                </ul>
-                                                <h5 class="article-title">
-                                                    <a href="blog-details.html" class="line-clamp-2 link">The Best
-                                                        Office Desks for
-                                                        Small
-                                                        Spaces</a>
-                                                </h5>
-                                                <p class="article-description text_secondary text-body-default">
-                                                    Learn how to choose compact yet functional desks to make the most of
-                                                    your office
-                                                    space.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="blog-article-item wow fadeInUp" data-wow-delay="0.2s">
-                                            <div class="article-thumb">
-                                                <a href="blog-details.html">
-                                                    <img class="lazyload" data-src="images/blog/blog-3.jpg"
-                                                        src="images/blog/blog-3.jpg" alt="img-blog">
-                                                </a>
-                                                <div class="article-label">
-                                                    <a href="#" class="text-button-small">Tech </a>
-                                                </div>
-                                            </div>
-                                            <div class="article-content">
-                                                <ul class="meta">
-                                                    <li class="text-button-small"><a href="#" class="link">January 3, 2025</a></li>
-                                                    <li class="text-button-small">by<a href="#"
-                                                            class="link">Themesflat</a></li>
-                                                </ul>
-                                                <h5 class="article-title">
-                                                    <a href="blog-details.html" class="line-clamp-2 link">How to Create
-                                                        a Stylish and
-                                                        Productive
-                                                        Workspace</a>
-                                                </h5>
-                                                <p class="article-description text_secondary text-body-default">
-                                                    Tips for balancing aesthetics and functionality when designing your
-                                                    office.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="blog-article-item">
-                                            <div class="article-thumb">
-                                                <a href="blog-details.html">
-                                                    <img class="lazyload" data-src="images/blog/blog-4.jpg"
-                                                        src="images/blog/blog-4.jpg" alt="img-blog">
-                                                </a>
-                                                <div class="article-label">
-                                                    <a href="#" class="text-button-small">Guides </a>
-                                                </div>
-                                            </div>
-                                            <div class="article-content">
-                                                <ul class="meta">
-                                                    <li class="text-button-small"><a href="#" class="link">January 7, 2025</a></li>
-                                                    <li class="text-button-small">by<a href="#"
-                                                            class="link">Themesflat</a></li>
-                                                </ul>
-                                                <h5 class="article-title">
-                                                    <a href="blog-details.html" class="line-clamp-2 link">Choosing the
-                                                        Right Standing
-                                                        Desk
-                                                        for a Healthier
-                                                        Workspace</a>
-                                                </h5>
-                                                <p class="article-description text_secondary text-body-default">
-                                                    Explore the benefits of standing desks and how they can improve your
-                                                    posture and
-                                                    productivity.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="blog-article-item">
-                                            <div class="article-thumb">
-                                                <a href="blog-details.html">
-                                                    <img class="lazyload" data-src="images/blog/blog-5.jpg"
-                                                        src="images/blog/blog-5.jpg" alt="img-blog">
-                                                </a>
-                                                <div class="article-label">
-                                                    <a href="#" class="text-button-small">Tech</a>
-                                                </div>
-                                            </div>
-                                            <div class="article-content">
-                                                <ul class="meta">
-                                                    <li class="text-button-small"><a href="#" class="link">January 9, 2025</a></li>
-                                                    <li class="text-button-small">by<a href="#"
-                                                            class="link">Themesflat</a></li>
-                                                </ul>
-                                                <h5 class="article-title">
-                                                    <a href="blog-details.html" class="line-clamp-2 link">Storage
-                                                        Solutions for an
-                                                        Organized Office</a>
-                                                </h5>
-                                                <p class="article-description text_secondary text-body-default">
-                                                    Find out how proper storage furniture can declutter your workspace
-                                                    and boost
-                                                    focus.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="blog-article-item">
-                                            <div class="article-thumb">
-                                                <a href="blog-details.html">
-                                                    <img class="lazyload" data-src="images/blog/blog-6.jpg"
-                                                        src="images/blog/blog-6.jpg" alt="img-blog">
-                                                </a>
-                                                <div class="article-label">
-                                                    <a href="#" class="text-button-small">Workspace</a>
-                                                </div>
-                                            </div>
-                                            <div class="article-content">
-                                                <ul class="meta">
-                                                    <li class="text-button-small"><a href="#" class="link">January 11, 2025</a></li>
-                                                    <li class="text-button-small">by<a href="#"
-                                                            class="link">Themesflat</a></li>
-                                                </ul>
-                                                <h5 class="article-title">
-                                                    <a href="blog-details.html" class="line-clamp-2 link">Lighting
-                                                        Options to Boost
-                                                        Productivity in Your
-                                                        Office</a>
-                                                </h5>
-                                                <p class="article-description text_secondary text-body-default">
-                                                    Discover how different lighting choices can affect your work
-                                                    environment and
-                                                    productivity.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+            <!-- Related Articles -->
+            @if ($relatedPosts && $relatedPosts->count() > 0)
+                <section class="related-articles">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-header">
+                                    <h3 class="section-title">Bài viết liên quan</h3>
+                                    <p class="section-subtitle">Khám phá thêm những bài viết thú vị khác mà bạn có thể thích</p>
                                 </div>
-                                <div class="sw-pagination-recent sw-dots type-circle d-flex justify-content-center">
+                                <div class="swiper tf-sw-recent " data-preview="3" data-tablet="2" data-mobile="1"
+                                    data-space-lg="30" data-space-md="30" data-space="15" data-pagination="1"
+                                    data-pagination-md="1" data-pagination-lg="1">
+                                    <div class="swiper-wrapper">
+                                        @foreach ($relatedPosts as $index => $relatedPost)
+                                            <div class="swiper-slide ">
+                                                <div class="blog-article-item wow fadeInUp"
+                                                    data-wow-delay="{{ $index * 0.1 }}s">
+                                                    <div class="article-thumb">
+                                                        <a href="{{ route('client.show', $relatedPost->slug) }}">
+                                                            @if ($relatedPost->thumbnail)
+                                                                <img class="lazyload"
+                                                                    data-src="{{ asset('storage/' . $relatedPost->thumbnail) }}"
+                                                                    src="{{ asset('storage/' . $relatedPost->thumbnail) }}"
+                                                                    alt="{{ $relatedPost->title }}">
+                                                            @else
+                                                                <img class="lazyload"
+                                                                    data-src="{{ asset('images/blog/default.jpg') }}"
+                                                                    src="{{ asset('images/blog/default.jpg') }}"
+                                                                    alt="{{ $relatedPost->title }}">
+                                                            @endif
+                                                        </a>
+                                                        @if ($relatedPost->category)
+                                                            <div class="article-label">
+                                                                <a href="#"
+                                                                    class="text-button-small">{{ $relatedPost->category }}</a>
+                                                            </div>
+                                                        @endif
+                                                    </div>
+                                                    <div class="article-content">
+                                                        <ul class="meta">
+                                                            <li class="text-button-small">
+                                                                <a href="#"
+                                                                    class="link">{{ $relatedPost->created_at->format('F d, Y') }}</a>
+                                                            </li>
+                                                            <li class="text-button-small">by
+                                                                <a href="#"
+                                                                    class="link">{{ $relatedPost->author ?? 'Admin' }}</a>
+                                                            </li>
+                                                        </ul>
+                                                        <h5 class="article-title">
+                                                            <a href="{{ route('client.show', $relatedPost->slug) }}"
+                                                                class="line-clamp-2 link">
+                                                                {{ $relatedPost->title }}
+                                                            </a>
+                                                        </h5>
+                                                        <p class="article-description text_secondary text-body-default">
+                                                            {{ Str::limit($relatedPost->description, 100) }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                    <div class="sw-pagination-recent sw-dots type-circle d-flex justify-content-center">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section><!-- Related -->
+                </section>
+            @endif
+            <!-- /Related Articles -->
 
         </div><!-- main-content -->
-@endsection
+    @endsection
+
+    @push('scripts')
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const content = document.querySelector('.blog-content');
+                const tocList = document.querySelector('.toc-list');
+                const tocContent = document.querySelector('.toc-content');
+                const tocToggle = document.querySelector('.toc-toggle');
+                if (!content || !tocList) return;
+
+                const headings = content.querySelectorAll('h2, h3, h4');
+                if (!headings.length) {
+                    const toc = document.querySelector('.blog-toc');
+                    if (toc) toc.style.display = 'none';
+                    return;
+                }
+
+                function slugify(text) {
+                    return text.toString().toLowerCase().trim()
+                        .replace(/\s+/g, '-')
+                        .replace(/[^\w\-]+/g, '')
+                        .replace(/\-\-+/g, '-')
+                        .replace(/^-+/, '')
+                        .replace(/-+$/, '');
+                }
+
+                headings.forEach(function(h) {
+                    const baseId = h.id ? h.id : slugify(h.textContent);
+                    let id = baseId;
+                    let i = 1;
+                    while (document.getElementById(id)) {
+                        id = baseId + '-' + i++;
+                    }
+                    h.id = id;
+
+                    const li = document.createElement('li');
+                    li.className = 'toc-' + h.tagName.toLowerCase();
+                    const a = document.createElement('a');
+                    a.href = '#' + id;
+                    a.textContent = h.textContent.trim();
+                    a.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.getElementById(id).scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        if (history.replaceState) {
+                            history.replaceState(null, null, '#' + id);
+                        }
+                        if (window.innerWidth <= 768 && tocContent) tocContent.classList.remove('open');
+                    });
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+
+                if (tocToggle && tocContent) {
+                    tocToggle.addEventListener('click', function() {
+                        tocContent.classList.toggle('open');
+                        const expanded = tocContent.classList.contains('open');
+                        tocToggle.setAttribute('aria-expanded', expanded);
+                    });
+                }
+            });
+        </script>
+    @endpush
