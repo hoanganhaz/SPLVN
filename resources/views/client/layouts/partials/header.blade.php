@@ -85,16 +85,17 @@ align-items: center;
         </div>
     </div> <!-- /topbar -->
 
-    <!-- Header -->
-    <header id="header" class="header-default">
-        <div class="main-header">
-            <div class="container-full">
-                <div class="row wrapper-header align-items-center">
-                    <div class="col-xl-5 d-none d-xl-block">
-                        <nav class="box-navigation text-center">
-                            <ul class="box-nav-ul justify-content-start">
-                              
-                                <a href="/" class="item-link">Trang Chủ</a>
+<!-- Header -->
+<header id="header" class="header-default">
+    <div class="main-header">
+        <div class="container-full">
+            <div class="row wrapper-header align-items-center">
+                <div class="col-xl-5 d-none d-xl-block">
+                    <nav class="box-navigation text-center">
+                        <ul class="box-nav-ul justify-content-start">
+
+                            <a href="/" class="item-link">Trang Chủ</a>
+                            <li class="menu-item position-relative">
                                 <a href="{{ route('client.product') }}" class="item-link">Danh mục<i
                                         class="icon icon-down"></i></a>
                                 <div class="sub-menu submenu-default">
@@ -120,58 +121,61 @@ align-items: center;
                                 </div>
 
                             </li>
-                                    <a href="{{ route('client.about') }}" class="item-link">Giới Thiệu </a>
-                                      <a href="{{ route('client.index') }}" class="item-link">Bài Viết </a>
-                                    
-                             
-                                <li class="menu-item position-relative">
-                                    <a href="#" class="item-link">Chính Sách <i class="icon icon-down"></i></a>
-                                    <div class="sub-menu submenu-default">
-                                        <ul class="menu-list">
-                                           
-                                            <li><a href="faqs.html" class="menu-link-text">Chính Sách Bảo Mật </a></li>
-                                            <li><a href="store-list.html" class="menu-link-text">Đổi Trả & Hoàn Tiền</a></li>
-                                            <li><a href="term-of-use.html" class="menu-link-text">Điều Khoản & Điều Kiện</a></li>
-                                          
-                                        </ul>
-                                    </div>
-                                </li>
-                            
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-md-4 col-2 d-xl-none">
-                        <a href="#mobileMenu" class="mobile-menu" data-bs-toggle="offcanvas"
-                            aria-controls="mobileMenu">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256">
-                                <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="col-xl-2 col-md-4 col-8 text-center">
-                        <a href="index-2.html" class="logo-header">
-                            <img src="{{ asset('assets/client/images/logo/logoH.jpg') }}" alt="logo" class="logo">
-                        </a>
-                    </div>
-                    <div class="col-xl-5 col-md-4 col-2">
-                        <ul class="nav-icon">
-                            <li class="nav-search">
-                                <a href="#search" data-bs-toggle="modal" class="nav-icon-item">
-                                    <span class="icon icon-search"></span>
-                                </a>
+                            <a href="{{ route('client.about') }}" class="item-link">Giới Thiệu </a>
+                            <a href="{{ route('client.index') }}" class="item-link">Bài Viết </a>
+
+
+                            <li class="menu-item position-relative">
+                                <a href="#" class="item-link">Chính Sách <i class="icon icon-down"></i></a>
+                                <div class="sub-menu submenu-default">
+                                    <ul class="menu-list">
+
+                                        <li><a href="faqs.html" class="menu-link-text">Chính Sách Bảo Mật </a></li>
+                                        <li><a href="store-list.html" class="menu-link-text">Đổi Trả & Hoàn Tiền</a>
+                                        </li>
+                                        <li><a href="term-of-use.html" class="menu-link-text">Điều Khoản & Điều Kiện</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
                             </li>
-                            <li class="nav-account">
-                                <a href="login.html" class="nav-icon-item">
-                                    <span class="icon icon-user"></span>
-                                </a>
-                            </li>
-                            <li class="nav-wishlist">
-                                <a href="wish-list.html" class="nav-icon-item">
-                                    <span class="icon icon-heart"></span>
-                                </a>
-                            </li>
-                            <li class="nav-cart"><a href="#shoppingCart" data-bs-toggle="modal" class="nav-icon-item">
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4 col-2 d-xl-none">
+                    <a href="#mobileMenu" class="mobile-menu" data-bs-toggle="offcanvas" aria-controls="mobileMenu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xl-2 col-md-4 col-8 text-center">
+                    <a href="index-2.html" class="logo-header">
+                        <img src="{{ asset('assets/client/images/logo/logoH.jpg') }}" alt="logo" class="logo">
+                    </a>
+                </div>
+                <div class="col-xl-5 col-md-4 col-2">
+                    <ul class="nav-icon">
+                        <li class="nav-search">
+                            <a href="#search" data-bs-toggle="modal" class="nav-icon-item">
+                                <span class="icon icon-search"></span>
+                            </a>
+                        </li>
+                        <li class="nav-account">
+                            <a href="login.html" class="nav-icon-item">
+                                <span class="icon icon-user"></span>
+                            </a>
+                        </li>
+                        <li class="nav-wishlist">
+                            <a href="wish-list.html" class="nav-icon-item">
+                                <span class="icon icon-heart"></span>
+                            </a>
+                        </li>
+                        <li class="nav-cart"><a href="#shoppingCart" data-bs-toggle="modal" class="nav-icon-item">
                                 <span class="icon icon-cart"></span>
                                 <span class="count-box text-button-small">1</span></a>
                             </li>
