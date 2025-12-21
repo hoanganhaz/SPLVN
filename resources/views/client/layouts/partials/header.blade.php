@@ -95,7 +95,31 @@ align-items: center;
                             <ul class="box-nav-ul justify-content-start">
                               
                                 <a href="/" class="item-link">Trang Chủ</a>
-                                <a href="{{ route('client.product') }}" class="item-link">Sản Phẩm </a>
+                                <a href="{{ route('client.product') }}" class="item-link">Danh mục<i
+                                        class="icon icon-down"></i></a>
+                                <div class="sub-menu submenu-default">
+                                    <ul class="menu-list">
+                                        @foreach($categories as $cat)
+                                            <li>
+                                                <a href="{{ route('client.product', $cat->id) }}" class="menu-link-text">{{ $cat->name }}</a>
+
+                                                @if($cat->children->count())
+                                                    <ul class="submenu">
+                                                        @foreach($cat->children as $child)
+                                                            <li>
+                                                                <a href="{{ route('client.product', $child->id) }}" class="menu-link-text">
+                                                                    --{{ $child->name }}
+                                                                </a>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                @endif
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+
+                            </li>
                                     <a href="{{ route('client.about') }}" class="item-link">Giới Thiệu </a>
                                       <a href="{{ route('client.index') }}" class="item-link">Bài Viết </a>
                                     
