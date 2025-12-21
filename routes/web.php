@@ -23,8 +23,10 @@ Route::get("/about", [HomeController::class, 'about'])->name('client.about');
 Route::get('/contact', [ContactController::class, 'index'])->name('client.contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-Route::get("/product", [HomeController::class, 'product'])->name('client.product');
-Route::get("/product_detail", [HomeController::class, 'productDetail'])->name('client.productDetail');
+
+
+Route::get("/product/{CategoryID?}", [HomeController::class, 'product'])->name('client.product');
+Route::get("/product_detail/{product}", [HomeController::class, 'productDetail'])->name('client.productDetail');
 
 Route::get("/post", [PostController::class, 'index'])->name('client.index');
 Route::get("/post_detail/{slug?}", [PostController::class, 'show'])->name('client.show');
