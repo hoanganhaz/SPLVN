@@ -26,6 +26,7 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 
 Route::get("/product/{CategoryID?}", [HomeController::class, 'product'])->name('client.product');
+Route::get('/san-pham-ngau-nhien', [HomeController::class, 'randomProducts'])->name('client.random');
 Route::get("/product_detail/{product}", [HomeController::class, 'productDetail'])->name('client.productDetail');
 
 Route::get("/post", [PostController::class, 'index'])->name('client.index');

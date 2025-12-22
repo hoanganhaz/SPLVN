@@ -31,5 +31,16 @@ class Post extends Model
                 $post->slug = Str::slug($post->title);
             }
         });
+        
 }
+public function getFormattedDateAttribute()
+    {
+        return $this->created_at->format('F d, Y');
+    }
+
+    // Format ngày tháng tiếng Việt
+    public function getFormattedDateViAttribute()
+    {
+        return $this->created_at->format('d/m/Y');
+    }
 }

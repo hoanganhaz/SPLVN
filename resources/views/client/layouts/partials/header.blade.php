@@ -1,89 +1,93 @@
 <style>
     .logo-header .logo {
-max-height: 65px;      /* chuẩn đẹp cho desktop */
-width: auto;
-object-fit: contain;
+        max-height: 65px;
+        /* chuẩn đẹp cho desktop */
+        width: auto;
+        object-fit: contain;
 
-}
-.logo-header {
-background: #fff;
-padding: 6px 14px;
-border-radius: 8px;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-}
-.logo-header {
-transition: all 0.3s ease;
-}
+    }
 
-.logo-header:hover {
-transform: scale(1.05);
-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-}
-.header-default .wrapper-header {
-align-items: center;
-}
-@media (max-width: 991px) {
-.logo-header {
-    padding: 4px 10px;
-}
+    .logo-header {
+        background: #fff;
+        padding: 6px 14px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.logo-header .logo {
-    max-height: 45px;
-}
-}
+    .logo-header {
+        transition: all 0.3s ease;
+    }
+
+    .logo-header:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    .header-default .wrapper-header {
+        align-items: center;
+    }
+
+    @media (max-width: 991px) {
+        .logo-header {
+            padding: 4px 10px;
+        }
+
+        .logo-header .logo {
+            max-height: 45px;
+        }
+    }
 </style>
 <div class="tf-topbar">
-        <div class="container-full">
-            <div class="row">
-                <div class="col-xl-4">
-                    <div class="topbar-left d-none d-xl-flex">
-                        <div class="tf-languages">
-                            <p class="text-caption-1 text_white">
-                                      Hotline: 0986512929
-                                        
-                                    </p>
-                        </div>
-                        <div class="tf-currencies">
-                            
-                        </div>
+    <div class="container-full">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="topbar-left d-none d-xl-flex">
+                    <div class="tf-languages">
+                        <p class="text-caption-1 text_white" style="color: #ffffff !important;">
+                            Hotline: 0986512929
+                        </p>
                     </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="wrapper-slider-topbar">
-                        <div class="swiper tf-sw-top_bar" data-preview="1" data-space="0" data-loop="true"
-                            data-speed="2000" data-auto-play="true" data-delay="2000">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <p class="text-caption-1 text_white">
-                                      Đẳng cấp tạo lên sự khác biệt
-                                        </p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p class="text-caption-1 text_white">
-                                        Miễn Phí Vận Chuyển Toàn Quốc
-                                        <span class="text_primary"></span>
-                                    </p>
-                                </div>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="navigation-topbar nav-next-topbar"><span class="icon icon-left"></span></div>
-                        <div class="navigation-topbar nav-prev-topbar"><span class="icon icon-right"></span></div>
-                    </div>
-                </div>
-                <div class="col-xl-4">
-                    <div class="topbar-right justify-content-end d-none d-xl-flex">
-                        <a href="{{ route('client.about') }}" class="text_white text-caption-1 link">Giới Thiệu</a>
-                        <a href="{{ route('client.contact') }}" class="text_white text-caption-1 link">Liên Hệ</a>
-                        <a href="store-list.html" class="text_white text-caption-1 link">Sản Phẩm</a>
+                    <div class="tf-currencies">
+
                     </div>
                 </div>
             </div>
+            <div class="col-xl-4">
+                <div class="wrapper-slider-topbar">
+                    <div class="swiper tf-sw-top_bar" data-preview="1" data-space="0" data-loop="true" data-speed="2000"
+                        data-auto-play="true" data-delay="2000">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <p class="text-caption-1 text_white"style="color: #ffffff !important;">
+                                    Đẳng cấp tạo lên sự khác biệt
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="text-caption-1 text_white" style="color: #ffffff !important;">
+                                    Miễn Phí Vận Chuyển Toàn Quốc
+                                    <span class="text_primary"></span>
+                                </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="navigation-topbar nav-next-topbar"><span class="icon icon-left"></span></div>
+                    <div class="navigation-topbar nav-prev-topbar"><span class="icon icon-right"></span></div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="topbar-right justify-content-end d-none d-xl-flex">
+                    <a href="{{ route('client.about') }}" class="text_white text-caption-1 link"style="color: #ffffff !important;">Giới Thiệu</a>
+                    <a href="{{ route('client.contact') }}" class="text_white text-caption-1 link"style="color: #ffffff !important;">Liên Hệ</a>
+                    <a href="store-list.html" class="text_white text-caption-1 link"style="color: #ffffff !important;">Sản Phẩm</a>
+                </div>
+            </div>
         </div>
-    </div> <!-- /topbar -->
+    </div>
+</div> <!-- /topbar -->
 
 <!-- Header -->
 <header id="header" class="header-default">
@@ -102,13 +106,15 @@ align-items: center;
                                     <ul class="menu-list">
                                         @foreach($categories as $cat)
                                             <li>
-                                                <a href="{{ route('client.product', $cat->id) }}" class="menu-link-text">{{ $cat->name }}</a>
+                                                <a href="{{ route('client.product', $cat->id) }}"
+                                                    class="menu-link-text">{{ $cat->name }}</a>
 
                                                 @if($cat->children->count())
                                                     <ul class="submenu">
                                                         @foreach($cat->children as $child)
                                                             <li>
-                                                                <a href="{{ route('client.product', $child->id) }}" class="menu-link-text">
+                                                                <a href="{{ route('client.product', $child->id) }}"
+                                                                    class="menu-link-text">
                                                                     --{{ $child->name }}
                                                                 </a>
                                                             </li>
@@ -178,13 +184,10 @@ align-items: center;
                         <li class="nav-cart"><a href="#shoppingCart" data-bs-toggle="modal" class="nav-icon-item">
                                 <span class="icon icon-cart"></span>
                                 <span class="count-box text-button-small">1</span></a>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </header><!-- /Header -->
-
-
-   
+    </div>
+</header><!-- /Header -->

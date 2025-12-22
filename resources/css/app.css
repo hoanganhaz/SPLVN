@@ -1,0 +1,43 @@
+/* Global: force all text to white for the site */
+/* Use sparingly — overrides most theme colors. */
+html,
+body {
+    color: #ffffff !important;
+}
+
+/* Ensure most text elements inherit white color */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+a,
+small,
+strong,
+button,
+label,
+input,
+textarea,
+select {
+    color: #ffffff !important;
+}
+
+/* Links and link children */
+a,
+a * {
+    color: #ffffff !important;
+}
+
+/* Fallback catch-all for any other text (use only if needed) */
+* {
+    color: #ffffff !important;
+}
+
+/* Keep images and backgrounds unaffected by color change */
+img {
+    filter: none;
+}
